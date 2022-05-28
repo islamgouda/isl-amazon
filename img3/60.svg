@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons / effects / magic sparkle</title>
+    <defs>
+        <path d="M9,7.5 C9,7.776 8.776,8 8.5,8 C6.57,8 5,9.57 5,11.5 C5,11.776 4.776,12 4.5,12 C4.224,12 4,11.776 4,11.5 C4,9.57 2.43,8 0.5,8 C0.224,8 0,7.776 0,7.5 C0,7.224 0.224,7 0.5,7 C2.43,7 4,5.43 4,3.5 C4,3.224 4.224,3 4.5,3 C4.776,3 5,3.224 5,3.5 C5,5.43 6.57,7 8.5,7 C8.776,7 9,7.224 9,7.5 Z M20.5,4 C18.57,4 17,2.43 17,0.5 C17,0.224 16.776,0 16.5,0 C16.224,0 16,0.224 16,0.5 C16,2.43 14.43,4 12.5,4 C12.224,4 12,4.224 12,4.5 C12,4.776 12.224,5 12.5,5 C14.43,5 16,6.57 16,8.5 C16,8.776 16.224,9 16.5,9 C16.776,9 17,8.776 17,8.5 C17,6.57 18.57,5 20.5,5 C20.776,5 21,4.776 21,4.5 C21,4.224 20.776,4 20.5,4 Z" id="path-1"></path>
+        <path d="M19.5,16 C16.467,16 14,13.533 14,10.5 C14,10.224 13.776,10 13.5,10 C13.224,10 13,10.224 13,10.5 C13,13.533 10.533,16 7.5,16 C7.224,16 7,16.224 7,16.5 C7,16.776 7.224,17 7.5,17 C10.533,17 13,19.467 13,22.5 C13,22.776 13.224,23 13.5,23 C13.776,23 14,22.776 14,22.5 C14,19.467 16.467,17 19.5,17 C19.776,17 20,16.776 20,16.5 C20,16.224 19.776,16 19.5,16 Z" id="path-3"></path>
+    </defs>
+    <g id="Review" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons-/-effects-/-magic-sparkle">
+            <g id="Group" transform="translate(1.000000, 1.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Shape" fill-rule="nonzero"></g>
+                <rect id="↳-secondary-icon-tint" fill="#FFFFFF" mask="url(#mask-2)" x="-1" y="-1" width="24" height="24"></rect>
+            </g>
+            <g id="Group-2">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Path" fill-rule="nonzero"></g>
+                <rect id="↳-icon-tint" fill="#FFFFFF" mask="url(#mask-4)" x="0" y="0" width="24" height="24"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

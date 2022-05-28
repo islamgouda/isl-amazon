@@ -1,0 +1,283 @@
+
+.stiky_header_container
+{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-top: 20px;
+    padding-bottom: 45px;
+}
+.stiky_L
+{
+    float: left;
+}
+.stiky_R
+{
+    float: right;
+}
+.stiky_R a
+{
+    background-color: #f90;
+    border: 2px solid #f90;
+    box-shadow: 0 0 16px rgb(0 0 0 / 20%);
+    color: #232f3e;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 10px 25px;
+}
+/*////////////////////////////////////////////////////*/
+
+.first_container
+{
+    padding: 35px 150px;
+    position: relative;
+    background-image: url(https://m.media-amazon.com/images/G/01/sell/images/colors/blue-50.svg);
+    background-size: cover;
+    background-position: top right;
+}
+.first_container_head
+{
+    font-size: 80px;
+    font-family: fantasy;
+    width: 525px;
+    padding-top: 25px;
+}
+
+.first_container_info
+{
+    font-size: 20px;
+    font-family: Helvetica,Arial,sans-serif;
+    width: 415px;
+    padding: 18px 0px;
+    margin-bottom: 20px;
+}
+.first_container_link a
+{
+    background-color: #f90;
+    border: 2px solid #f90;
+    box-shadow: 0 0 16px rgb(0 0 0 / 20%);
+    color: #232f3e;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 25px;
+}
+.first_container_img
+{
+    position: absolute;
+    top: 30px;
+    right: 170px;
+}
+.first_container_img img
+{
+    height: 470px;
+}
+
+/*///////////////////////////////////////////////////*/
+
+.second_container
+{
+    padding: 51px 130px 15px 145px;
+}
+
+.second_container_L
+{
+    float: left;
+}
+
+.second_container_R
+{
+    float: right;
+}
+.second_container_R_btn
+{
+    background-color: #007185;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 163px;
+    font-size: 14px;
+    color: white;
+}
+.second_container_R_btn img{
+    height: 10px;
+}
+.second_container_R_head
+{
+    font-size: 45px;
+    color: #232f3e;
+    font-weight: 700;
+    width: 455px;
+    margin-top: 15px;
+}
+.second_container_R_info
+{
+    font-size: 20px;
+    width: 680px;
+    margin-top: 10px;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+.second_container_R_list ul
+{
+    list-style-image: url(https://m.media-amazon.com/images/G/01/sell/images/icon-check-blue-thick.svg);
+}
+.second_container_R_list ul li
+{
+    padding-left: 8px;
+}
+.second_container_R_end a
+{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #232f3e;
+    cursor: pointer;
+}
+
+/*//////////////////////////////////////////*/
+
+.third_container
+{
+    clear: both;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 25px;
+}
+.third_container_card
+{
+    border-radius: 8px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 10%);
+    border: 1px solid #eaeded;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding: 28px 20px;
+}
+.third_container_card_img
+{
+    width: 170px;
+}
+.third_container_card_img img
+{
+    height: 65px;
+}
+.third_container_card_head
+{
+    font-size: 32px;
+    color: #232f3e;
+    font-weight: 700;
+    width: 271px;
+    text-align: left;
+    margin-top: 30px;
+}
+.third_container_card_info
+{
+    width: 272px;
+    font-size: 14px;
+    color: rgb(108, 119, 120);
+    margin-top: 20px;
+    font-family: Helvetica,Arial,sans-serif;
+}
+.third_container_card_link a
+{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #232f3e;
+    cursor: pointer;
+}
+
+/*//////////////////////////////*/
+.forth_container
+{
+    padding: 51px 130px 15px 145px;
+}
+
+.forth_container_L
+{
+    float: left;
+    padding-top: 10px;
+}
+
+.forth_container_R
+{
+    float: right;
+    padding-top: 70px;
+}
+
+.forth_container_R_head
+{
+    font-size: 30px;
+    color: #232f3e;
+    font-weight: 600;
+    width: 645px;
+    margin-top: 15px;
+}
+.forth_container_R_info
+{
+    font-size: 18px;
+    display: flex;
+    width: 680px;
+    margin-top: 30px;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+/*/////////////////////////////////////////*/
+
+.fifth_container
+{
+    border-radius: 8px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 10%);
+    border: 1px solid #eaeded;
+    margin-left: 20px;
+    clear: both;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 48px;
+    margin-top: 30px;
+    padding: 30px 95px;
+    width: 715px;
+    position: relative;
+    left: 170px;
+    height: 230px;
+}
+.fifth_container_L a ,.fifth_container_R a
+{
+    display: flex;
+    text-decoration: none;
+    color: #232f3e;
+    font-size: 17px;
+}
+
+
+/*/////////////////////////////////////////*/
+
+.sixth_container_card_img {
+    width: 80px;
+}
+.sixth_container_card_img img
+{
+    height: 64px;
+}
+
+#fotter_container
+{
+    background-color: #37475A;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    clear: both;
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+}

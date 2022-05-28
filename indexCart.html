@@ -1,0 +1,780 @@
+<head>
+    <link rel="stylesheet" href="learning/navcss.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<style>
+     *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }   
+    .hero
+    {
+        height:60px;
+        width: 100%;
+        background-color: rgb(245, 240, 250);
+    }
+    .navbar
+    {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        background-color: black;
+        color: white;
+    }
+    img
+    {
+        height: 60px;
+    }
+    .item
+    {
+    padding-bottom: 1px;
+    padding-right: 0;
+    margin: 10px 10px 10px 10px;
+    }
+    .item:hover
+    {
+        border: 1px solid white;
+    }
+    nav input
+    {
+        width:670px;
+        padding: 10px;
+        font-size: 17;
+        border: none;
+        outline: none;
+        color: #000;
+    }
+    nav button
+    {
+       padding: 10px 10px;
+       color: #000;
+       font-size: 17px;
+       border: none;
+       border-radius: 5px 0px 0px 5px;
+       cursor: pointer;
+    }
+    .isearch
+    {
+        
+        padding-bottom: 1px;
+        padding-right: 0;
+        margin: 0px 0px 0px 0px;
+        
+        
+    }
+    .searchbtn
+    {
+        background-color: orange;
+        margin-left: -5px;
+        padding-top:8px;
+
+        height: 41px;
+        border-radius: 0px 5px 5px 0px;
+    }
+    .subnavigation
+    {
+        height: 40px;
+        background-color: rgba(109, 73, 73, 0.473);
+        color: white;
+    }
+    .subnavmenu
+    {
+        color: #000;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .subnavmenu li
+    {
+        display: inline;
+        text-align: center;
+        float: left;
+    }
+    
+    li a
+    {
+        display: inline;
+        padding: 0px;
+        margin: 8px; 
+        text-decoration: none;
+        text-align: center;
+        color: white;
+    }
+    li a:hover
+    {
+        border: 1px solid white;
+    }
+    #Contaier
+    {
+        width: 1340px;
+        background-color: #F5F5F5;
+        height: 450px;
+        position: relative;
+        top: -2px;
+        margin-left: -7px;
+    }
+    #Co1
+    {
+        width: 1000px;
+        height: 260px;
+        background-color: white;
+        margin-bottom: 20px;
+        display: flex;
+        margin-left: 15px;
+        position: absolute; 
+        top: 20px;
+    }
+    #Co2
+    {
+        width: 1000px;
+        height: 80px;
+        background-color: white;
+        margin-left: 15px;
+        position: absolute; 
+        top: 300px;
+    }
+    #Co3
+    {
+        width: 1000px;
+        position: absolute; 
+        top:390px ; 
+        margin-left: 15px;
+        font-size: 12px; 
+    }
+    .b1
+    {
+        width: 180px;
+        height: 30px;
+        font-size: 13px;
+        position: absolute;
+        top:110px;
+        left: 318px;
+        background-color: yellow;
+        border-radius: 5px 5px 5px 5px;
+        cursor:pointer;
+    }
+    #b2
+    {
+        left: 530px;
+        width: 120px;
+        background-color:white;
+        border-radius: 5px 5px 5px 5px;
+    }
+    #C4
+    {
+        height: 150px;
+        width: 1340px;
+        background-color: white;
+        border: 1px solid gray;
+        margin-left: -7px;
+        text-align: center;
+        font-size: 12px;
+    }
+    #img1
+    {
+       width: 250px;
+       height: 200px; 
+    }
+    #cartlink
+    {
+        text-decoration: none;
+        top:80px;
+        left:-340px;
+        text-align: right;
+        position: relative;
+        color: darkgray;
+        font-size: 15px;
+    }
+    #txt
+    {
+        top:46px;
+        left:70px;
+        text-align: right;
+        position: relative;
+        color: black;
+
+
+    }
+    #c4 button
+    {
+        background-color: blue;
+        width: 180px;
+        height: 30px;
+        font-size: 13px;
+        background-color: yellow;
+        border-radius: 5px 5px 5px 5px;
+        cursor:pointer;
+    }
+    #lastp
+    {
+        margin-top: 25px;
+    }
+    
+    .navbar2{
+        z-index: 666;
+        margin-bottom: 2px;
+    }
+    .hh{
+        display: none;
+    }
+</style>
+<body>
+    <div class="hero">
+<nav class="navbar">
+ <div><a href="index.html"><img src="Amazon-Logo.jpg" alt="logo" class="logo"></a></div>
+  <div class="item">
+    <p>Deliver to</p>
+    <h5 class="countryg">Address</h5>
+   </div>    <div class="item">
+             <button class="all" type="button">all<i class="fa fa-sort-desc"></i>
+             </button>
+             <input type="text">
+             <button class="searchbtn" type="submit"><i class="fa fa-search"></i>
+             </button>
+            </div>
+   <div class="item">
+       <div class="submenu">
+       <i class="fa fa-flag"></i>
+       <i class="fa fa-sort-desc"></i>
+       </div>
+    </div>
+    <div class="item a-item" onmouseover="showwin()" onmouseout="donshow()" >
+            <p class="account-item" onclick="gsignin()">Hello,sign in</p>
+    <h5>Account&lists</h5>
+    <!---->
+    <div class="login-logout-f" >
+            <div class="logout">
+                <div class="sin-top">
+                        <input type="button" value="Sign in" class="n-sign-button" onclick="signt()">
+                        <span>New customer?</span><a href="register.html">start here</a>
+                </div><div></div>
+                <div class="sign-bottom">
+                        <div class="your-lists">
+                           
+                                <div class="h-ll-title" >
+                                        Your Lists
+                                </div>
+                                
+                                <a href="#">Create a List</a>
+                                <a href="#">Find a List or Registry  </a>
+                                <a href="#">AmazonSmile CharityLists</a>
+                        </div>
+                        <div class="your-accounts">
+                                <div class="h-ll-title">
+                                        Your Account
+                                </div>
+                                <a href="#">Account</a>
+                                <a href="#">Orders</a>
+                                <a href="#">Recommendations</a>
+                                <a href="#">Browsing History</a>
+                                <a href="#">WatchList</a>
+                                <a href="#">Video Perchases & Rentals</a>
+                                <a href="#">Kindle Unlimited</a>
+                                <a href="#">Content & Devices</a>
+                                <a href="#">Subscribe & Save Items</a>
+                                <a href="#">Memberships & Subscriptions</a>
+                                <a href="#">Music Library</a>
+                                <a href="#" class="sign-out">Sign Out</a>
+                                
+                         </div>
+                         
+
+                </div>
+                
+            </div>
+        </div>
+        <!---->
+   </div>
+   <div class="item">
+    <p>Returns</p>
+    <h5>&Orders</h5>
+   </div>
+   <div class="item">
+    <i class="fa fa-cart-plus" >Cart</i>
+   </div>
+</nav>
+</div>
+<div class="navbar2">
+    <a href="javascript:void(0)" onclick="openNav()"><i class="fa fa-list" ></i>All</a>
+    <a href="TodaysDeals.html"> Today's Deals</a>
+    <a href="#"> Customer Service</a>
+    <a href="#"> Registery</a>
+    <a href="#"> Gift Cards</a>
+    <a href="#"> Sell</a>
+  </div>
+  <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <ul>
+  <li><h1>Digital Content&Devices</h1></li>
+  <li>
+      <a href="#">Amazon Music</a>
+      <ul>
+        <li><a href="#">#FounditOnAmazon</a></li>
+        <li><a href="#">#FounditOnAmazon</a></li>
+        <li><a href="#">#FounditOnAmazon</a></li>
+        <li><a href="#">#FounditOnAmazon</a></li>
+        <li><a href="#">#FounditOnAmazon</a></li>
+      </ul>
+    
+  </li>
+  <li><a href="#">#FounditOnAmazon</a></li>
+  <li><a href="#">Amazon Live</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><h1>Digital Content&Devices</h1></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Clients</a></li>
+  <li><h1>Digital Content&Devices</h1></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Clients</a></li>
+  <li><h1>Digital Content&Devices</h1></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Clients</a></li>
+</ul>
+  </div>
+  <div id="Contaier">
+    <div id="Co1">
+    <img id="img1" src="cartpage.jpeg">
+    <h1 id="txt">Your Amazon Cart is empty</h1>
+    
+    <a href="#" id="cartlink">Shop today's deals</a>
+    <button class="b1 sign-in">Sign in to your Account</button>
+    <button class="b1 sign-up" id="b2">Sign up now</button>
+    
+    </div>
+    <div id="Co2">
+   
+    </div>
+    <div id="Co3">
+    <p>The price and availability of items at Amazon.com are subject to change. The Cart is a temporary place to store a list of your items and reflects each item's most recent price. Shopping CartLearn more
+       Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.</p>
+    </div>
+     </div>
+     <div id="C4">
+     <p id="lastp">See personalized recommendations</p>
+     <button>sign in</button>
+     <p>New customer?<a href="#">Start here.</a><p>
+     </div>
+   
+  
+     
+<script>
+    if(localStorage.currentUser!==null){
+                        let n=JSON.parse(localStorage.currentUser);
+                        document.querySelector(".account-item").innerHTML='Hello,'+n.Name;
+                       document.querySelector(".sign-in").style.display="none";
+                       document.querySelector(".sign-up").style.display="none";
+                       document.querySelector("#img1").style.display="none";
+                       document.querySelector(".hh").style.display="block";
+                      
+        
+                    }
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+
+</script>
+
+<div class="footer">
+    <div class="back-to-top">back To Top</div>
+    <div class="footer-container">
+        <div class="links-col">
+            <h4 class="foot-title">Get to Know Us</h4>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+            <a href="#">About Amazon</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Amazon Devices</a>
+            <a href="#">Amazon Science</a>
+        </div>
+        <div class="links-col">
+            <h4 class="foot-title">Make Money with Us</h4>
+            <a href="#">Sell products on Amazon</a>
+            <a href="#">Sell on Amazon Business</a>
+            <a href="#">Sell apps on Amazon</a>
+            <a href="#">Advertise Your Products</a>
+            <a href="#">Self-Publish with Us</a>
+            <a href="#">Host an Amazon Hub</a>
+            <a href="#">›See More Make Money with Us</a>
+        </div>
+        <div class="links-col">
+            <h4 class="foot-title">Amazon Payment Products</h4>
+            <a href="#">Amazon Business Card</a>
+            <a href="#">Shop with Points</a>
+            <a href="#">Reload Your Balance</a>
+            <a href="#">Amazon Currency Converter</a>
+            
+
+        </div>
+        <div class="links-col last">
+            <h4 class="foot-title">Let Us Help You</h4>
+            <a href="#">Amazon and COVID-19</a>
+            <a href="#">Your Account</a>
+            <a href="#">Your Orders</a>
+            <a href="#"> Shipping Rates & Policies</a>
+            <a href="#">Returns & Replacements</a>
+            <a href="#">Manage Your Content and Devices</a>
+            <a href="#">Amazon Assistant</a>
+            <a href="#">Help</a>
+        </div>
+    </div>
+</div>
+
+<div class="middle-footer">
+    <div class="middle-footer-first"><img  src="./images/p1/1.png"></div>
+    <div class="middle-footer-second">
+        <div class="foot-l">English</div>
+        <div class="foot-l">
+            
+                $ USD - U.S.Dollar
+        </div>
+        <div class="foot-l max-l"><img src="./images/p1/2.png"><div>United states</div></div>
+    </div>
+        
+    </div>
+
+
+
+<div class="footer-2">
+    <div class="footer-2-col">
+        <a href="#">
+            <h6 class="link-tit">
+                Amazon Music</h6>
+            <div class="link-disc">Stream millions
+                of songs</div>
+        </a>
+        <a href="#">
+            <h6 class="link-tit">
+                Sell on Amazon</h6>
+            <div class="link-disc">Start a Selling Account</div>
+        </a>
+        <a href="#">
+            <h6 class="link-tit">
+                 
+Book Depository</h6>
+            <div class="link-disc">Books With Free
+                Delivery Worldwide</div>
+        </a>
+        <a href="#">
+            <h6 class="link-tit">               
+            IMDbPro</h6>
+            <div class="link-disc">Get Info Entertainment
+                Professionals Need</div>
+        </a>
+        
+    </div>
+    <div class="footer-2-col">
+        <a href="#">
+            <h6 class="link-tit">
+                Amazon Advertising</h6>
+            <div class="link-disc">Find, attract, and
+                engage customers</div>
+        </a>
+        <a href="#">
+            <h6 class="link-tit">
+                Amazon Business</h6>
+            <div class="link-disc">Everything For
+                Your Business</div>
+        </a>
+        <a href="#">
+            <h6 class="link-tit">
+            	Box Office Mojo
+            </h6>
+            <div class="link-disc">Find Movie
+                Box Office Data</div>
+        </a>
+        <a href="#">
+            <h6 class="link-tit">               
+                Kindle Direct Publishing</h6>
+            <div class="link-disc">Indie Digital & Print Publishing
+                Made Easyd</div>
+        </a>
+        <a href="#">
+            <h6 class="link-tit">               
+                eero WiFi</h6>
+            <div class="link-disc">Stream 4K Video
+                in Every Room</div>
+        </a>
+   </div>
+   <div class="footer-2-col">
+    
+    <a href="#">
+        <h6 class="link-tit">
+            Amazon Drive</h6>
+        <div class="link-disc">Cloud storage
+            from Amazon</div>
+    </a>
+    <a href="#">
+        <h6 class="link-tit">
+            AmazonGlobal</h6>
+        <div class="link-disc">Ship Orders
+            Internationally</div>
+    </a>
+    <a href="#">
+        <h6 class="link-tit">
+            ComiXology
+        </h6>
+        <div class="link-disc">Thousands of
+            Digital Comics</div>
+    </a>
+    <a href="#">
+        <h6 class="link-tit">               
+            Prime Video Direct</h6>
+        <div class="link-disc">Video Distribution
+            Made Easy</div>
+    </a>
+    <a href="#">
+        <h6 class="link-tit">               
+            Blink</h6>
+        <div class="link-disc">Smart Security
+            for Every Home</div>
+    </a>
+  </div>
+  <div class="footer-2-col">
+    <a href="#">
+        <h6 class="link-tit">
+            6pm</h6>
+        <div class="link-disc">Score deals
+            on fashion brands</div>
+    </a>
+    <a href="#">
+        <h6 class="link-tit">
+            Home Services</h6>
+        <div class="link-disc">Experienced Pros
+            Happiness Guarantee</div>
+    </a>
+    <a href="#">
+        <h6 class="link-tit">
+            DPReview
+        </h6>
+        <div class="link-disc">Digital
+            Photography</div>
+    </a>
+    <a href="#">
+        <h6 class="link-tit">               
+            Shopbop</h6>
+        <div class="link-disc">Designer
+            Fashion Brands</div>
+    </a>
+    <a href="#">
+        <h6 class="link-tit">               
+            Neighbors App</h6>
+        <div class="link-disc">Real-Time Crime
+            & Safety Alerts</div>
+    </a>
+  </div>
+  <div class="footer-2-col">
+
+        <a href="#">
+                <h6 class="link-tit">
+                        AbeBooks</h6>
+                <div class="link-disc">Books, art
+                        & collectibles</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                        Amazon Ignite</h6>
+                <div class="link-disc">Sell your original
+                        Digital Educational
+                        Resources</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                        Fabric
+                </h6>
+                <div class="link-disc">Sewing, Quilting
+                        & Knitting</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">               
+                        Woot!</h6>
+                <div class="link-disc">Deals and
+                        Shenanigans</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">               
+                        Amazon Subscription Boxes</h6>
+                <div class="link-disc">Top subscription boxes – right to your door</div>
+            </a>
+    
+  </div>
+  <div class="footer-2-col">
+    
+        <a href="#">
+                <h6 class="link-tit">
+                        ACX</h6>
+                <div class="link-disc">Audiobook Publishing
+                        Made Easy</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                        Amazon Web Services</h6>
+                <div class="link-disc">Scalable Cloud
+                        Computing Services</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                        Goodreads
+                </h6>
+                <div class="link-disc">Book reviews
+                        & recommendations</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">               
+                        Zappos</h6>
+                <div class="link-disc">Shoes &
+                        Clothing</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">               
+                        PillPack</h6>
+                <div class="link-disc">Pharmacy Simplified	</div>
+            </a>
+
+ </div>
+ <div class="footer-2-col">
+
+        <a href="#">
+                <h6 class="link-tit">
+                        Alexa</h6>
+                <div class="link-disc">Actionable Analytics
+                        for the Web</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                        Audible</h6>
+                <div class="link-disc">Listen to Books & Original
+                        Audio Performances</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                        IMDb
+                </h6>
+                <div class="link-disc">Movies, TV
+                        & Celebrities</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">               
+                        Ring</h6>
+                <div class="link-disc">Smart Home
+                        Security Systems</div>
+            </a>
+           
+
+    
+  </div>
+
+</div>
+<div class="footer-3">
+    <div class="l-foot">
+        <a href="#">Conditions of Use</a>
+    </div>
+    <div class="l-foot"><a href="#">
+    Privacy Notice</a></div>
+    <div class="l-foot"><a href="#">
+        Interest-Based Ads</a></div>
+    <div class="l-foot">© 1996-2022, Amazon.com, Inc. or its affiliates</div>
+</div>
+
+    
+    
+</body>
+<script src="cchart.js"></script>
+<script>
+
+document.querySelector(".back-to-top").addEventListener("click",gototp);
+    function gototp(){
+        window.scrollTo(0,0);
+    }
+    try{
+    if(localStorage.currentUser!==null){
+        let n=JSON.parse(localStorage.currentUser);
+        document.querySelector(".account-item").innerHTML='Hello,'+n.Name;
+        ////
+        //document.querySelector(".logout span").style.display="none";
+        document.querySelector(".sin-top ").style.display="none";
+        //document.querySelector(".n-sign-button").style.backgroundColor="White";
+       // document.querySelector(".sign-out").style.display="";
+     // 
+    }else{
+       // document.querySelector(".sin-top").style.display="none";
+      // document.querySelector('.sin-top').style.display="block";
+      document.querySelector(".sign-out").style.display="none";
+    }
+}catch(err){}
+    document.querySelector('.index-chart').addEventListener("click",nextChartPage);
+    function nextChartPage(){
+        location.assign('indexCart.html');
+    }
+   function showmusic(){
+       document.querySelector('.msidebar').style.display="block";
+   }
+   function closeNav1(){
+    document.querySelector('.msidebar').style.display="none";
+   }
+    
+   try{
+    var xhttp= new XMLHttpRequest();
+         xhttp.onreadystatechange=function(){
+             if(this.readyState==4 && this.status==200)
+             {
+                 var dataAfterConvert=JSON.parse(xhttp.responseText)
+               console.log(dataAfterConvert.location.country.name);
+               document.querySelector('.countryg').innerHTML=dataAfterConvert.location.country.name;
+               localStorage.setItem("ccountry",dataAfterConvert.location.country.name);
+             }
+         };
+         xhttp.open("GET","https://api.ipregistry.co/?key=tryout",true);
+         xhttp.send();
+ }
+ 
+ catch(err){
+console.log(err.message);
+ }
+ if(localStorage.getItem("ccountry")!==null){
+    document.querySelector('.countryg').innerHTML=localStorage.getItem("ccountry");
+ }
+ //console.log("ccc"+localStorage.getItem("ccountry")); 
+    document.querySelector(".n-sign-button").addEventListener("click",()=>{
+        location.assign("login.html");
+    }) 
+  function showwin(){
+       document.querySelector(".login-logout-f").style.display="block";
+   }
+   function donshow(){
+    document.querySelector(".login-logout-f").style.display="none";
+   }
+document.querySelector(".sign-out").addEventListener("click",(e)=>{
+e.preventDefault();
+localStorage.currentUser=null;
+document.querySelector(".account-item").innerHTML='Hello,'+'Sign in';
+document.querySelector(".sin-top ").style.display="block";
+document.querySelector(".sign-out").style.display="none";
+Location.assign("c.html");
+});
+function signt(){
+    location.assign("login.html");
+}
+    
+function gsignin(){
+    location.assign("login.html");
+}
+if(localStorage.getItem("ccountry")!==null){
+    document.querySelector('.countryg').innerHTML=localStorage.getItem("ccountry");
+ }      
+   
+</script>
+
+</html>

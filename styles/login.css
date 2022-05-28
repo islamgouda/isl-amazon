@@ -1,0 +1,134 @@
+.container{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.log-cont{
+    display: block;
+}
+.logo{
+ display: block;
+ height: 34px;
+ margin: 10px auto 15px auto;
+}
+.emaileer{
+    border: 1px solid #FF008D;
+    color:red;
+    width:340px;
+    padding-left: 40px;
+    display: none;
+}
+.form-cont{
+    border: 1px solid #6F6F6F;
+    width:350px;
+    padding:10px 0px 10px 30px;
+    border-radius: 4px;
+    
+}
+.form-cont h5{
+    padding: 0px;
+    margin: 0px;
+}
+.myEmail{
+    display: block;
+    width:89%;
+    height: 23px;
+    border-radius: 3px;
+    border: 1px solid #6F6F6F;
+  margin: 5px 0px 15px 0px;
+  
+}
+.myEmail:focus{
+    border: 2px solid #F3BB61;
+    box-shadow: 2px 2px 7px #F7B449;
+    outline: none !important;
+    border-color: #F3BB61;
+    box-shadow: 0 0 10px #F3BB61;
+}
+.submit{
+    display: block;
+    width:91%;
+    height: 28px;
+    border-radius: 3px;
+    margin: 5px 0px 10px 0px;
+    border: 1px solid #6F6F6F;
+    background-color: #F5C16F;
+    opacity: .9;
+    cursor: pointer;
+    
+    font-size: 17px;
+}
+.submit:hover{
+    background-color: #F7B449;
+}
+.form-text-dis{
+    font-size: 14px;
+    width: 89%;
+    color: #6F6F6F;
+    
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.help{
+    display: block;
+    font-size: 14px;
+    margin: 20px 0px 15px 0px;
+}
+.newtoamazon{
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    width:400px;
+}
+.newtoamazon h5{
+    width:100px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    color: #6C6C6C;
+}
+.newtoamazon hr{
+    width: 130px;
+   border-bottom: 0px;
+   border-right: 0px;
+   border-left: 0px;
+    outline: 0px;
+    height: 1px;
+    padding: 0px;
+    margin-left: 0px;
+    color: #717171;
+    transform: rotate(180deg);
+
+}
+.register-b{
+    width: 380px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 2px;
+    border:1px solid #7E7E7E;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.footer{
+background-image: linear-gradient(to bottom,#e8e8e8,#ffffff);
+
+}
+.footer-cont{
+    width:270px;
+    margin:10px auto 10px auto;
+}
+.foot-links{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0px 3px 0px;
+}
+.foot-links a{
+    font-size: 12px;
+}
+.footer-cont h6{
+font-size: 13.5px;
+color: #4F4F4F;
+}

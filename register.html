@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/register.css">
+    <title>Document</title>
+</head>
+<body>
+
+ <div class="container">
+        <a href="index.html" class="log-cont"><img src="./images/loginlogo/1.png" class="logo"></a>
+        
+
+        <div class="form-cont">
+                <form action="verify.html">
+                        <h1 class="sign-in-title">
+                            Create Account
+                        </h1>
+                        <h5>
+                                Your name
+                        </h5>
+                        <input type="textbox" name="username" class="myname my-input" placeholder="First And Last Name" required >
+                        <div class="nameerror error">
+                                Enter your name
+                        </div>
+                        <h5>
+                                Mobile number or email
+                        </h5>
+                        <input type="textbox" name="Email" class="myEmail my-input" required>
+                        <div class="emailerror error">
+                                Enter your Email
+                        </div>
+                        <div class="invalemailerror error">
+                                Wrong or Invalid email address or mobile phone number. Please correct and try again.
+                        </div>
+                        
+
+                        <h5>
+                                Password
+                        </h5>
+                        <input type="password" name="password" class="pass my-input" placeholder="At least 6 characters" required>
+                        <div class="passerror error">
+                                Minimum 6 characters required
+                                
+                        </div>
+                        <h5>
+                                Re-enter password
+                        </h5>
+                        <input type="password" name="password" class="repass my-input" placeholder="At least 6 characters" required>
+                        <div class="repasserror error">
+                                Type your password again
+                        </div>
+                        <input type="button" name="continu" value="continue" class="submit">
+                        <div class="form-text-dis">By creating an account, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a></div>
+                        
+                    </form>
+                    <div class="form-foot">
+                        <div class="fo-f">
+                           <div>
+                                Already have an account?
+                           </div>
+                           <a href="login.html"> Sign-In</a>
+                        </div>
+                        <div class="fo-f">
+                                <div>
+                                        Buying for work?
+                                   </div>
+                                   <a href="login.html"> Create a free business account</a>
+                        </div>
+                    </div>
+        </div>
+        
+
+ </div>
+ <div class="footer">
+     <div class="footer-cont">
+            <div class="foot-links">
+                    <a href="#"> Conditions of Use </a>
+                    <a href="#"> Privacy Notice </a>
+                    <a href="#"> Help </a>
+                </div>
+            <h6>©  1996-2022,  Amazon.com, Inc. or its affiliates</h6>
+     </div>
+     
+ </div>
+    
+    
+</body>
+<script src="./scripts/register.js"></script>
+</html>

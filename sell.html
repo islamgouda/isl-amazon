@@ -1,0 +1,1320 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">    
+            <link rel="stylesheet" href="learning/navcss.css">
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+            <style>
+                .mySlidesfade
+                {
+                    display: grid;
+                    width: 100%;
+                    grid-template-columns: repeat(5,20%);
+                }
+                .mySlidesfade div
+                {
+                    background-color: white;
+                    font-weight:normal;
+                }
+                .parent
+                {
+                    display: grid;
+                    width: 100%;
+                    height: 2000px;
+                    grid-template-columns: repeat(5,20%);
+                    grid-template-rows: repeat(15,auto);
+                }
+                .parent div
+                {
+                    background-color: white;
+                    border: 1px solid black;
+                    font-weight:normal;
+                }
+                .Aside
+                {
+                    grid-row:span 15;
+                    border: 1px solid black;
+                }
+                .Aside div
+                {
+                    padding: 10px;
+                    border: 1px solid white;
+                }
+                .Aside a 
+                {
+                    font-size: 15px; 
+                    display: block; 
+                    text-align: left;
+                    font-weight:normal;
+                    cursor: pointer;
+                }
+                .Aside a:hover
+                {
+                    color: beige;
+                }
+                .Aside h1 
+                {
+                    font-size: 18px; 
+                    display: block; 
+                    text-align: left;
+                }
+                .Aside input 
+                {
+                    font-size: 10px; 
+                    text-align: left;
+                }
+                .Acontent img
+                {
+                    width: 150px;
+                    height: 150px;
+                    
+                }
+                .Acontent button
+                {
+                background-color: crimson;
+                border: none;
+                }
+                .Acontent 
+                {
+                padding: 10px;
+                }
+                .rating-css {
+                    background: #101012;
+                    border:none;
+                    padding: 2px;
+                   }
+               .rating-css div {
+                color: #ffe400;
+                font-size: 3px;
+                font-family: sans-serif;
+                font-weight: 800;
+                text-align: left;
+                 text-transform: uppercase;
+                padding: 2px 0;
+                border:none;
+                   }
+        .rating-css input {
+          display: none;
+          border:none;
+        }
+        .rating-css input + label {
+          text-shadow: 1px 1px 0 #ffe400;
+          cursor: pointer;
+          border:none;
+        }
+        .rating-css input:checked + label ~ label {
+          color: #838383;
+        }
+        .rating-css label:active {
+          transform: scale(0.8);
+          transition: 0.3s ease;
+        }        
+        *
+            {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .hero
+            {
+                height:60px;
+                width: 100%;
+                background-color: rgb(245, 240, 250);
+            }
+            .navbar
+            {
+                display: flex;
+                align-items: center;
+                height: 60px;
+                background-color: black;
+                color: white;
+            }
+            img
+            {
+                height: 60px;
+            }
+            .item
+            {
+            padding-bottom: 1px;
+            padding-right: 0;
+            margin: 10px 10px 10px 10px;
+            }
+            .item:hover
+            {
+                border: 1px solid white;
+            }
+            nav input
+            {
+                width:730px;
+                padding: 10px;
+                font-size: 17;
+                border: none;
+                outline: none;
+                color: #000;
+            }
+            nav button
+            {
+               padding: 10px 10px;
+               color: #000;
+               font-size: 17px;
+               border: none;
+               border-radius: 5px 0px 0px 5px;
+               cursor: pointer;
+            }
+            .isearch
+            {
+                padding-bottom: 1px;
+                padding-right: 0;
+                margin: 0px 0px 0px 0px;
+            }
+            .searchbtn
+            {
+                background-color: orange;
+                margin-left: -5px;
+                padding-top:8px;
+                height: 41px;
+                border-radius: 0px 5px 5px 0px;
+            }
+            .subnavigation
+            {
+                height: 40px;
+                background-color: rgba(109, 73, 73, 0.473);
+                color: white;
+            }
+            .subnavmenu
+            {
+                color: #000;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .subnavmenu li
+            {
+                display: inline;
+                text-align: center;
+                float: left;
+            }
+            li a
+            {
+                display: inline;
+                padding: 0px;
+                margin: 8px; 
+                text-decoration: none;
+                text-align: center;
+                color: white;
+            }
+            li a:hover
+            {
+                border: 1px solid white;
+            }
+                
+            .pagination
+            {
+                margin-left: 450px;
+                background-color: white;
+            }
+            .pagination a {
+          color: black;
+          float: left;
+          padding: 8px 16px;
+          text-decoration: none;
+          transition: background-color .3s;
+          background-color: #ddd;
+          margin: 4px;
+             }
+        
+        /* Style the active/current link */
+              .pagination a.active {
+               background-color: white;
+                color: black;
+                }
+        
+        /* Add a grey background color on mouse-over */
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+            
+        #Contaier
+            {
+                width: 1340px;
+                background-color: #F5F5F5;
+                height: 450px;
+                position: relative;
+                top: -2px;
+                margin-left: -7px;
+            }
+            #Co1
+            {
+                width: 1280px;
+                height: 400px;
+                background-color: white;
+                margin-bottom: 20px;
+                display: flex;
+                margin-left: 30px;
+                position: absolute; 
+                top: 20px;
+                
+            }
+            .b1
+            {
+                width: 180px;
+                height: 30px;
+                font-size: 13px;
+                position: absolute;
+                top:110px;
+                left: 318px;
+                background-color: yellow;
+                border-radius: 5px 5px 5px 5px;
+                cursor:pointer;
+            }
+            #b2
+            {
+                left: 530px;
+                width: 120px;
+                background-color:white;
+                border-radius: 5px 5px 5px 5px;
+            }
+            #C4
+            {
+                height: 100px;
+                width: 1340px;
+                background-color: white;
+                border: 1px solid gray;
+                margin-left: -7px;
+                text-align: center;
+                font-size: 12px;
+            }
+            #img1
+            {
+               width: 250px;
+               height: 200px; 
+            }
+            #cartlink
+            {
+                text-decoration: none;
+                top:80px;
+                left:-340px;
+                text-align: right;
+                position: relative;
+                color: darkgray;
+                font-size: 15px;
+            }
+            #txt
+            {
+                top:46px;
+                left:70px;
+                text-align: right;
+                position: relative;
+                color: black;
+        
+        
+            }
+            #c4 button
+            {
+                background-color: blue;
+                width: 180px;
+                height: 30px;
+                font-size: 13px;
+                background-color: yellow;
+                border-radius: 5px 5px 5px 5px;
+                cursor:pointer;
+            }
+            #lastp
+            {
+                margin-top: 25px;
+            }
+        
+        
+            /* Slideshow container */
+        .slideshow-container {
+          width: 1200px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color:black;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          border: 1px solid black;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: -40;
+          border-radius: 3px 0 0 3px;
+        }
+        .prev
+        {
+            left: -40px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: black;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4}
+          to {opacity: 1}
+        }
+        
+        .hero
+                {
+                    height:60px;
+                    width: 100%;
+                    background-color: rgb(245, 240, 250);
+                }
+                .navbar
+                {
+                    display: flex;
+                    align-items: center;
+                    height: 60px;
+                    background-color: black;
+                    color: white;
+                    margin: 0px;
+                }
+                img
+                {
+                    
+                    height: 60px;
+                    
+                    
+                }
+                .logo{
+                    display: block;
+                    height: 60px;
+                    padding: 0px;
+                    margin: 0px;
+                    background-color: black;
+                }
+                .my-logo-1{
+                    padding: 0px;
+                    margin: 0px;
+                    background-color: black;
+                }
+                .my-logo-1 a{
+                    display: block;
+                    text-decoration: none;
+                    padding: 0px;
+                    margin: 0px;
+                }
+                .item
+                {
+                padding-bottom: 1px;
+                padding-right: 0;
+                margin: 10px 10px 10px 10px;
+                }
+                .item:hover
+                {
+                    border: 1px solid white;
+                }
+                nav input
+                {
+                    width:650px;
+                    height:40px;
+                    padding: 10px;
+                    font-size: 17;
+                    border: none;
+                    outline: none;
+                    color: #000;
+                    margin: 0px;
+                    border:none;
+                    margin: 0px;
+                }
+                .all{
+                    border:none;
+                    margin: 0px;
+                }
+                nav button
+                {
+                    height:40px;
+                   padding: 10px 10px;
+                   color: #000;
+                   font-size: 17px;
+                   border: none;
+                   border-radius: 5px 0px 0px 5px;
+                   cursor: pointer;
+                }
+                .isearch
+                {   height:40px;
+                   /* padding-bottom: 1px;*/
+                    padding-left: 0;
+                    margin: 0px 0px 0px 0px;
+                }
+                .searchbtn
+                {
+                    background-color: orange;
+                    margin-left: -5px;
+                    padding-top:8px;
+                    height: 41px;
+                    border-radius: 0px 5px 5px 0px;
+                }
+                .subnavigation
+                {
+                    height: 40px;
+                    background-color: rgba(109, 73, 73, 0.473);
+                    color: white;
+                }
+                .subnavmenu
+                {
+                    color: #000;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                }
+                .subnavmenu li
+                {
+                    display: inline;
+                    text-align: center;
+                    float: left;
+                }
+                .fa-cart-plus{
+                    font-size: 30px;
+                }
+                .index-chart{
+                cursor: pointer;
+            }
+                li a
+                {
+                    display: inline;
+                    padding: 0px;
+                    margin: 8px; 
+                    text-decoration: none;
+                    text-align: center;
+                    color: white;
+                }
+                li a:hover
+                {
+                    border: 1px solid white;
+                }
+                
+                
+        
+            </style>
+        <link rel="stylesheet" href="sell.css">
+    </head>
+    <body>
+            <div class="hero">
+                    <nav class="navbar">
+                     <div class="my-logo-1"><a href="index.html"><img src="Amazon-Logo.jpg" alt="logo" class="logo"></a></div>
+                      <div class="item">
+                        <p>Deliver to</p>
+                        <h5 class="countryg">Address</h5>
+                       </div>   
+                        <div class="item flex-item">
+                                 <button class="all"class="m-item" type="button">all<i class="fa fa-sort-desc"></i>
+                                 </button>
+                                 <input type="text" class="m-item">
+                                 <button class="searchbtn m-item" type="submit"><i class="fa fa-search"></i>
+                                 </button>
+                                </div>
+                       <div class="item">
+                           <div class="submenu">
+                           <i class="fa fa-flag"></i>
+                           <i class="fa fa-sort-desc"></i>
+                           </div>
+                        </div>
+                       <div class="item a-item" onmouseover="showwin()" onmouseout="donshow()" >
+                        <p class="account-item" onclick="gsignin()">Hello,sign in</p>
+                        <h5>Account&lists</h5>
+                         <!---->
+                         <div class="login-logout-f" >
+                            <div class="logout">
+                                <div class="sin-top">
+                                        <input type="button" value="Sign in" class="n-sign-button" onclick="signt()">
+                                        <span>New customer?</span><a href="register.html">start here</a>
+                                </div><div></div>
+                                <div class="sign-bottom">
+                                        <div class="your-lists">
+                                           
+                                                <div class="h-ll-title" >
+                                                        Your Lists
+                                                </div>
+                                                
+                                                <a href="#">Create a List</a>
+                                                <a href="#">Find a List or Registry  </a>
+                                                <a href="#">AmazonSmile CharityLists</a>
+                                        </div>
+                                        <div class="your-accounts">
+                                                <div class="h-ll-title">
+                                                        Your Account
+                                                </div>
+                                                <a href="#">Account</a>
+                                                <a href="#">Orders</a>
+                                                <a href="#">Recommendations</a>
+                                                <a href="#">Browsing History</a>
+                                                <a href="#">WatchList</a>
+                                                <a href="#">Video Perchases & Rentals</a>
+                                                <a href="#">Kindle Unlimited</a>
+                                                <a href="#">Content & Devices</a>
+                                                <a href="#">Subscribe & Save Items</a>
+                                                <a href="#">Memberships & Subscriptions</a>
+                                                <a href="#">Music Library</a>
+                                                <a href="#" class="sign-out">Sign Out</a>
+                                                
+                                         </div>
+                                         
+        
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!---->
+                       </div>
+                       <div class="item">
+                        <p>Returns</p>
+                        <h5>&Orders</h5>
+                       </div>
+                       <div class="item  index-chart">
+                        <i class="fa fa-cart-plus" ></i>Cart
+                       </div>
+                    </nav>
+                    </div>
+                    <div class="navbar2">
+                        <a href="javascript:void(0)" onclick="openNav()"><i class="fa fa-list" ></i>All</a>
+                        <a href="TodaysDeals.html"> Today's Deals</a>
+                        <a href="Customer_service.html"> Customer Service</a>
+                        <a href="Registery.html"> Registery</a>
+                        <a href="#"> Gift Cards</a>
+                        <a href="sell.html"> Sell</a>
+                      </div>
+                      <div id="mySidebar" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                        <ul>
+                        <li><h1>Digital Content&Devices</h1></li>
+                        <li>
+                            <a href="#" onclick="openNestedSidebar()">Amazon Music<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                          <div class="hiddenmenu" id="myss">
+                            <ul>
+                              <li><a style="padding:10px;" href="#" onclick="closeNestedSidebar()">Main Menu<i style="float:left;" class="fa fa-arrow-left" aria-hidden="true"></i></a></li>  
+                              <li><a href="Amazon_Music_Unlimited.html">Amazon Music Unlimited</a></li>
+                              <li><a href="Amazon_Music_Free_stream.html">Free Streaming Music </a></li>
+                              <li><a href="Amazon_Music_Podcast.html">Podcasts</a></li>
+                              <li><a href="#">Open Web Player</a></li>
+                              <li><a href="#">Download the App</a></li>
+                            </ul>
+                          </div>
+                          
+                        </li>
+                        <li><a href="#">Kindle E-readers&Books <i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Amazon Live<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">App Store for android<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><h1>Shop By Department</h1></li>
+                        <li><a href="#">Electronics<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Computers<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Smart Home<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Arts $ Crafts<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><h1>Programs & Features</h1></li>
+                        <li><a href="#">Gift Cards<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">#FounditOnAmazon<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Amazon live<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">international Shopping<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><h1>Help &Settings</h1></li>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">United States</a></li>
+                        <li><a href="#">Customer service </a></li>
+                        <li><a href="#">sign in</a></li>
+                      </ul>
+                        </div>
+    
+    
+    
+    
+    
+                      <!---->
+                   
+                    <script>
+                        if(localStorage.currentUser!==null){
+                            let n=JSON.parse(localStorage.currentUser);
+                            document.querySelector(".account-item").innerHTML='Hello,'+n.Name;
+                        }
+                    function openNav() {
+                      document.getElementById("mySidebar").style.width = "250px";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidebar").style.width = "0";
+                      document.getElementById("main").style.marginLeft= "0";
+                    }
+                    </script>
+        <div class="stiky_header_container">
+            <div class="stiky_L">Sell on Amazon</div>
+            <div class="stiky_R"><a href=""><span>Register to sell</span></a></div>
+        </div>
+
+        <div class="first_container">
+            <div class="first_container_head">Become an Amazon seller</div>
+            <div class="first_container_info">More than half the units sold in our stores are from independent sellers.</div>
+            <div class="first_container_link"><a href=""><span>Register to sell</span></a></div>
+            <div style="margin-top: 20px;font-size: 12px;padding-left: 35px;">$39.99 a month + selling fees</div>
+            <div class="first_container_img"><img src="img3/42.png"></div>
+        </div>
+
+        <div class="second_container">
+            <div class="second_container_L">
+                <div>
+                    <img style="height: 330px; padding-top: 20px;" src="	https://m.media-amazon.com/images/G/01/sell/images/illustration/illustration-growth-graph.svg">
+                </div>
+            </div>
+            <div class="second_container_R">
+                <div class="second_container_R_btn">
+                    <img style="float: left;" src="https://m.media-amazon.com/images/G/01/sell/images/icon-magic-sparkle-white.svg"> 
+                    New Seller Incentives
+                    <img style="float: right;" src="https://m.media-amazon.com/images/G/01/sell/images/icon-magic-sparkle-white.svg">
+                </div>
+                <div class="second_container_R_head">Over $50K in potential benefits</div>
+                <div class="second_container_R_info">Ready to sell? Launch your brand today with a powerful playbook for new sellers and over $50K in potential benefits.</div>
+                <div class="second_container_R_list">
+                    <ul>
+                        <li>Get 5% back on your first $1,000,000 in branded sales</li>
+                        <li>Try FBA with free inbound shipping, storage, removals, and returns</li>
+                        <li>Get $200 credit for Sponsored Products CPC ads—bids are up to you</li>
+                        <li>Get a head start on brand protection, product reviews, and more</li>
+                    </ul>
+                </div>
+                <div class="second_container_R_end"><a href="">Learn more</a></div>
+            </div>
+        </div>
+
+        <div class="third_container">
+            <div class="third_container_card">
+                <div class="third_container_card_img">
+                    <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Desktop_Computer._CB424651243_.svg">
+                </div>
+                <div class="third_container_card_head">Sell more</div>
+                <div class="third_container_card_info">
+                    Fresh new startups and Fortune 500s. B2B and B2C. Brand owners and resellers.
+                    Independent third-party sellers sold more than a billion items during the 2019 holiday season alone.
+                </div>
+                <div style="margin-top: 24px;" class="third_container_card_link"> <a href="">How to get started</a></div>
+            </div>
+            <div class="third_container_card">
+                <div class="third_container_card_img">
+                    <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Shipping._CB424651256_.svg">
+                </div>
+                <div class="third_container_card_head">Scale with FBA</div>
+                <div class="third_container_card_info">
+                    Leave the shipping, returns, and customer service to us with Fulfillment by Amazon (FBA).
+                    Its the easiest way to reach 150 million paid Prime members around the world.
+                </div>
+                <div style="margin-top: 24px;" class="third_container_card_link"><a href="">What is FBA?</a></div>
+            </div>
+            <div class="third_container_card">
+                <div class="third_container_card_img">
+                    <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Paid_Services_USD._CB424651263_.svg">
+                </div>
+                <div class="third_container_card_head">Make money</div>
+                <div class="third_container_card_info">
+                    In 2019, nearly 225,000 Amazon sellers worldwide eclipsed $100,000 in sales,
+                    up from nearly 200,000 in 2018—and 15,000 U.S. businesses broke $1 million.
+                </div>
+                <div style="margin-top: 24px;" class="third_container_card_link"><a href="">Explore selling programs</a></div>
+            </div>
+        </div>
+
+        <div class="forth_container" style="overflow: hidden;">
+            <div class="forth_container_L">
+                <div>
+                    <img style="height: 330px; padding-top: 20px;" src="img3/44.jpg">
+                </div>
+            </div>
+            <div class="forth_container_R">
+                <div class="forth_container_R_head">
+                    With all the infrastructure, systems,
+                     and processes Amazon built I realized that selling efficiency is no longer a problem.
+                    </div>
+                <div class="forth_container_R_info">
+                    <div style="margin-right: 20px;">
+                        <img style="height: 65px;" src="img3/40.png">
+                    </div>
+                    <div style="padding-top: 13px;">
+                        <span style="font-weight: 900;">Steven Yang</span><br>
+                        <span style="font-size: 15px; color: #6c7778;">Anker Technology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fifth_container">
+            <div style="font-size: 30px;font-weight: 900; color: #232f3e;margin-bottom: 45px;margin-top: 10px;font-family: Helvetica,Arial,sans-serif;">
+                Learn more about selling with Amazon</div>
+            <div>
+                <div class="fifth_container_L" style="float: left;">
+                    <a href="">Sell online: How to get started</a><br>
+                    <a href="">The Beginner's Guide to Selling on Amazon</a><br>
+                    <a href="">Grow your ecommerce business with Amazon</a><br>
+                    <a href="">Build, grow, and protect your brand on Amazon</a><br>
+                </div>
+                <div  class="fifth_container_R"style="float: right;">
+                    <a href="">Get help from an Amazon account manager</a><br>
+                    <a href="">How much does it cost to sell on Amazon?</a><br>
+                    <a href="">Use FBA to scale your ecommerce business</a><br>
+                    <a href="">Amazon Handmade, Amazon Business, and more</a><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="sixth_container" style="clear: both; text-align: center;padding-top: 70px;">
+            <div class="sixth_container_caption" style="font-size: 48px; font-weight: 900; color: #232f3e;">
+                Introduction to ecommerce selling
+            </div>
+            <div class="sixth_container_content" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <div class="third_container_card">
+                    <div class="sixth_container_card_img">
+                        <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Mobile_App.svg">
+                    </div>
+                    <div class="third_container_card_head">What is ecommerce?</div>
+                    <div class="third_container_card_info">
+                        Electronic commerce (ecommerce) is the trading of goods and services on the internet.
+                         Learn about the advantages and disadvantages of this selling channel.
+                    </div>
+                    <div style="margin-top: 24px;" class="third_container_card_link"> <a href="">Intro to ecommerce</a></div>
+                </div>
+                <div class="third_container_card">
+                    <div class="sixth_container_card_img">
+                        <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Line_Chart.svg">
+                    </div>
+                    <div class="third_container_card_head">Build a business</div>
+                    <div class="third_container_card_info">
+                        For entrepreneurs and growing businesses, ecommerce can be a profitable model to adapt either as the sole focus of your business,
+                         or as an additional selling channel.
+                    </div>
+                    <div style="margin-top: 24px;" class="third_container_card_link"><a href="">Ecommerce business guide</a></div>
+                </div>
+                <div class="third_container_card">
+                    <div class="sixth_container_card_img">
+                        <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Delivery_Truck.svg">
+                    </div>
+                    <div class="third_container_card_head">Ecommerce fulfillment</div>
+                    <div class="third_container_card_info">
+                        Ecommerce fulfillment is a vital ingredient to growing a successful online retail channel.
+                         Here is what to consider when looking for an order fulfillment service.
+                    </div>
+                    <div style="margin-top: 24px;" class="third_container_card_link"><a href="">Learn about fulfillment</a></div>
+                </div>
+
+                <div class="third_container_card">
+                    <div class="sixth_container_card_img">
+                        <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Products_In_Boxes.svg">
+                    </div>
+                    <div class="third_container_card_head">Inventory management</div>
+                    <div class="third_container_card_info">
+                        Maintaining the right amount of inventory to meet demand can help keep your business humming. 
+                        Get effective inventory management tips for ecommerce business owners.
+                    </div>
+                    <div style="margin-top: 24px;" class="third_container_card_link"><a href="">Intro to inventory</a></div>
+                </div>
+                <div class="third_container_card">
+                    <div class="sixth_container_card_img">
+                        <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Checklist.svg">
+                    </div>
+                    <div class="third_container_card_head">What is dropshipping?</div>
+                    <div class="third_container_card_info">
+                        This guide covers the definition of dropshipping, how it works, pros and cons,
+                         related Amazon policies, and alternatives to consider for ecommerce businesses.
+                    </div>
+                    <div style="margin-top: 24px;" class="third_container_card_link"><a href="">Learn about dropshipping</a></div>
+                </div>
+                <div class="third_container_card">
+                    <div class="sixth_container_card_img">
+                        <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Stores.svg">
+                    </div>
+                    <div class="third_container_card_head">Create an Amazon storefront</div>
+                    <div class="third_container_card_info">
+                        Learn how to tell your brand story using Amazon tools.
+                         Build immersivei storefronts and customize product detail pages with rich media and content.
+                    </div>
+                    <div style="margin-top: 24px;" class="third_container_card_link"><a href="">Build an online store</a></div>
+                </div>
+
+                <div class="third_container_card">
+                    <div class="sixth_container_card_img">
+                        <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Books.svg">
+                    </div>
+                    <div class="third_container_card_head">Sell books on Amazon</div>
+                    <div class="third_container_card_info">
+                        Learn how to sell used books, new books, or your own self-published books.
+                         We've got the steps to help you get started—and seven tips to help you succeed.
+                    </div>
+                    <div style="margin-top: 24px;" class="third_container_card_link"><a href="">Sell your books</a></div>
+                </div>
+                <div class="third_container_card">
+                    <div class="sixth_container_card_img">
+                        <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Seller_University._CB424651257_.svg">
+                    </div>
+                    <div class="third_container_card_head">Seller University</div>
+                    <div class="third_container_card_info">
+                        Our online training program is designed to help brands,
+                         businesses, and entrepreneurs learn how to succeed as Amazon selling partners.
+                    </div>
+                    <div style="margin-top: 24px;" class="third_container_card_link"><a href="">Go to Seller U</a></div>
+                </div>
+                <div class="third_container_card">
+                    <div class="sixth_container_card_img">
+                        <img src="https://m.media-amazon.com/images/G/01/sp-marketing-toolkit/guides/design/iconography/Spotlight._CB424651253_.svg">
+                    </div>
+                    <div class="third_container_card_head">Amazon Selling Partner Blog</div>
+                    <div class="third_container_card_info">
+                        Read updates, articles, and stories about getting started in ecommerce and growing your business in Amazon stores.
+                    </div>
+                    <div style="margin-top: 24px;" class="third_container_card_link"><a href="">Read the blog</a></div>
+                </div>
+            </div>
+        </div>
+
+       <!-- <div id="fotter_container">
+            <div>Back to top</div>-->
+        </div>
+        <div class="footer">
+                <div class="back-to-top">back To Top</div>
+                <div class="footer-container">
+                    <div class="links-col">
+                        <h4 class="foot-title">Get to Know Us</h4>
+                        <a href="#">Careers</a>
+                        <a href="#">Blog</a>
+                        <a href="#">About Amazon</a>
+                        <a href="#">Investor Relations</a>
+                        <a href="#">Amazon Devices</a>
+                        <a href="#">Amazon Science</a>
+                    </div>
+                    <div class="links-col">
+                        <h4 class="foot-title">Make Money with Us</h4>
+                        <a href="#">Sell products on Amazon</a>
+                        <a href="#">Sell on Amazon Business</a>
+                        <a href="#">Sell apps on Amazon</a>
+                        <a href="#">Advertise Your Products</a>
+                        <a href="#">Self-Publish with Us</a>
+                        <a href="#">Host an Amazon Hub</a>
+                        <a href="#">›See More Make Money with Us</a>
+                    </div>
+                    <div class="links-col">
+                        <h4 class="foot-title">Amazon Payment Products</h4>
+                        <a href="#">Amazon Business Card</a>
+                        <a href="#">Shop with Points</a>
+                        <a href="#">Reload Your Balance</a>
+                        <a href="#">Amazon Currency Converter</a>
+                        
+            
+                    </div>
+                    <div class="links-col last">
+                        <h4 class="foot-title">Let Us Help You</h4>
+                        <a href="#">Amazon and COVID-19</a>
+                        <a href="#">Your Account</a>
+                        <a href="#">Your Orders</a>
+                        <a href="#"> Shipping Rates & Policies</a>
+                        <a href="#">Returns & Replacements</a>
+                        <a href="#">Manage Your Content and Devices</a>
+                        <a href="#">Amazon Assistant</a>
+                        <a href="#">Help</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="middle-footer">
+                <div class="middle-footer-first"><img  src="./images/p1/1.png"></div>
+                <div class="middle-footer-second">
+                    <div class="foot-l">English</div>
+                    <div class="foot-l">
+                        
+                            $ USD - U.S.Dollar
+                    </div>
+                    <div class="foot-l max-l"><img src="./images/p1/2.png"><div>United states</div></div>
+                </div>
+                    
+                </div>
+            
+            
+            
+            <div class="footer-2">
+                <div class="footer-2-col">
+                    <a href="#">
+                        <h6 class="link-tit">
+                            Amazon Music</h6>
+                        <div class="link-disc">Stream millions
+                            of songs</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                            Sell on Amazon</h6>
+                        <div class="link-disc">Start a Selling Account</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                             
+            Book Depository</h6>
+                        <div class="link-disc">Books With Free
+                            Delivery Worldwide</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">               
+                        IMDbPro</h6>
+                        <div class="link-disc">Get Info Entertainment
+                            Professionals Need</div>
+                    </a>
+                    
+                </div>
+                <div class="footer-2-col">
+                    <a href="#">
+                        <h6 class="link-tit">
+                            Amazon Advertising</h6>
+                        <div class="link-disc">Find, attract, and
+                            engage customers</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                            Amazon Business</h6>
+                        <div class="link-disc">Everything For
+                            Your Business</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                            Box Office Mojo
+                        </h6>
+                        <div class="link-disc">Find Movie
+                            Box Office Data</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">               
+                            Kindle Direct Publishing</h6>
+                        <div class="link-disc">Indie Digital & Print Publishing
+                            Made Easyd</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">               
+                            eero WiFi</h6>
+                        <div class="link-disc">Stream 4K Video
+                            in Every Room</div>
+                    </a>
+               </div>
+               <div class="footer-2-col">
+                
+                <a href="#">
+                    <h6 class="link-tit">
+                        Amazon Drive</h6>
+                    <div class="link-disc">Cloud storage
+                        from Amazon</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">
+                        AmazonGlobal</h6>
+                    <div class="link-disc">Ship Orders
+                        Internationally</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">
+                        ComiXology
+                    </h6>
+                    <div class="link-disc">Thousands of
+                        Digital Comics</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">               
+                        Prime Video Direct</h6>
+                    <div class="link-disc">Video Distribution
+                        Made Easy</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">               
+                        Blink</h6>
+                    <div class="link-disc">Smart Security
+                        for Every Home</div>
+                </a>
+              </div>
+              <div class="footer-2-col">
+                <a href="#">
+                    <h6 class="link-tit">
+                        6pm</h6>
+                    <div class="link-disc">Score deals
+                        on fashion brands</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">
+                        Home Services</h6>
+                    <div class="link-disc">Experienced Pros
+                        Happiness Guarantee</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">
+                        DPReview
+                    </h6>
+                    <div class="link-disc">Digital
+                        Photography</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">               
+                        Shopbop</h6>
+                    <div class="link-disc">Designer
+                        Fashion Brands</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">               
+                        Neighbors App</h6>
+                    <div class="link-disc">Real-Time Crime
+                        & Safety Alerts</div>
+                </a>
+              </div>
+              <div class="footer-2-col">
+            
+                    <a href="#">
+                            <h6 class="link-tit">
+                                    AbeBooks</h6>
+                            <div class="link-disc">Books, art
+                                    & collectibles</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">
+                                    Amazon Ignite</h6>
+                            <div class="link-disc">Sell your original
+                                    Digital Educational
+                                    Resources</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">
+                                    Fabric
+                            </h6>
+                            <div class="link-disc">Sewing, Quilting
+                                    & Knitting</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">               
+                                    Woot!</h6>
+                            <div class="link-disc">Deals and
+                                    Shenanigans</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">               
+                                    Amazon Subscription Boxes</h6>
+                            <div class="link-disc">Top subscription boxes – right to your door</div>
+                        </a>
+                
+              </div>
+              <div class="footer-2-col">
+                
+                    <a href="#">
+                            <h6 class="link-tit">
+                                    ACX</h6>
+                            <div class="link-disc">Audiobook Publishing
+                                    Made Easy</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">
+                                    Amazon Web Services</h6>
+                            <div class="link-disc">Scalable Cloud
+                                    Computing Services</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">
+                                    Goodreads
+                            </h6>
+                            <div class="link-disc">Book reviews
+                                    & recommendations</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">               
+                                    Zappos</h6>
+                            <div class="link-disc">Shoes &
+                                    Clothing</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">               
+                                    PillPack</h6>
+                            <div class="link-disc">Pharmacy Simplified	</div>
+                        </a>
+            
+             </div>
+             <div class="footer-2-col">
+            
+                    <a href="#">
+                            <h6 class="link-tit">
+                                    Alexa</h6>
+                            <div class="link-disc">Actionable Analytics
+                                    for the Web</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">
+                                    Audible</h6>
+                            <div class="link-disc">Listen to Books & Original
+                                    Audio Performances</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">
+                                    IMDb
+                            </h6>
+                            <div class="link-disc">Movies, TV
+                                    & Celebrities</div>
+                        </a>
+                        <a href="#">
+                            <h6 class="link-tit">               
+                                    Ring</h6>
+                            <div class="link-disc">Smart Home
+                                    Security Systems</div>
+                        </a>
+                       
+            
+                
+              </div>
+            
+            </div>
+            <div class="footer-3">
+                <div class="l-foot">
+                    <a href="#">Conditions of Use</a>
+                </div>
+                <div class="l-foot"><a href="#">
+                Privacy Notice</a></div>
+                <div class="l-foot"><a href="#">
+                    Interest-Based Ads</a></div>
+                <div class="l-foot">© 1996-2022, Amazon.com, Inc. or its affiliates</div>
+            </div>
+    </body>
+
+    <script>
+            document.querySelector(".back-to-top").addEventListener("click",gototp);
+           function gototp(){
+               window.scrollTo(0,0);
+           }
+           document.querySelector('.index-chart').addEventListener("click",nextChartPage);
+           function nextChartPage(){
+               location.assign('indexCart.html');
+           }
+           if(localStorage.currentUser!==null){
+           let n=JSON.parse(localStorage.currentUser);
+           document.querySelector(".account-item").innerHTML='Hello,'+n.Name;
+           ////
+           //document.querySelector(".logout span").style.display="none";
+           document.querySelector(".sin-top ").style.display="none";
+           //document.querySelector(".n-sign-button").style.backgroundColor="White";
+          // document.querySelector(".sign-out").style.display="";
+        // 
+       }else{
+          // document.querySelector(".sin-top").style.display="none";
+         // document.querySelector('.sin-top').style.display="block";
+         document.querySelector(".sign-out").style.display="none";
+       }
+       try{
+           var xhttp= new XMLHttpRequest();
+                xhttp.onreadystatechange=function(){
+                    if(this.readyState==4 && this.status==200)
+                    {
+                        var dataAfterConvert=JSON.parse(xhttp.responseText)
+                      console.log(dataAfterConvert.location.country.name);
+                      document.querySelector('.countryg').innerHTML=dataAfterConvert.location.country.name;
+                      localStorage.setItem("ccountry",dataAfterConvert.location.country.name);
+                    }
+                };
+                xhttp.open("GET","https://api.ipregistry.co/?key=tryout",true);
+                xhttp.send();
+        }
+        
+        catch(err){
+       console.log(err.message);
+        }
+        if(localStorage.getItem("ccountry")!==null){
+           document.querySelector('.countryg').innerHTML=localStorage.getItem("ccountry");
+        }
+                   
+           document.querySelector(".n-sign-button").addEventListener("click",()=>{
+               location.assign("login.html");
+           }) 
+         function showwin(){
+              document.querySelector(".login-logout-f").style.display="block";
+          }
+          function donshow(){
+           document.querySelector(".login-logout-f").style.display="none";
+          }
+       document.querySelector(".sign-out").addEventListener("click",(e)=>{
+       e.preventDefault();
+       localStorage.currentUser=null;
+       document.querySelector(".account-item").innerHTML='Hello,'+'Sign in';
+       document.querySelector(".sin-top ").style.display="block";
+       document.querySelector(".sign-out").style.display="none";
+       Location.assign("c.html");
+       });
+       function signt(){
+           location.assign("login.html");
+       }
+           
+       function gsignin(){
+           location.assign("login.html");
+       }
+                   
+           
+           function openNav() {
+         document.getElementById("mySidebar").style.width = "350px";
+       }
+       
+       function closeNav() {
+         document.getElementById("mySidebar").style.width = "0";
+         document.getElementById("main").style.marginLeft= "0";
+       }
+       function openNestedSidebar() {
+         document.getElementById("myss").style.width = "350px";
+       }
+       function closeNestedSidebar() {
+         document.getElementById("myss").style.width = "0";
+       }
+       
+           let slideIndex = 1;
+       showSlides(slideIndex);
+       
+       // Next/previous controls
+       function plusSlides(n) {
+         showSlides(slideIndex += n);
+       }
+       
+       // Thumbnail image controls
+       function currentSlide(n) {
+         showSlides(slideIndex = n);
+       }
+       
+       function showSlides(n) {
+         let i;
+         let slides = document.getElementsByClassName("mySlides");
+         let dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";
+         }
+         for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+       }
+           </script>
+</html>

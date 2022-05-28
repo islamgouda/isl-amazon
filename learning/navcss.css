@@ -1,0 +1,137 @@
+.navbar2 {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar2 a {
+    float: left;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 1px;
+    padding-right: 0;
+    margin: 10px 10px 0px 10px;
+  }
+  /* Navbar links on mouse-over */
+  .navbar2 a:hover {
+    border: 1px solid white;
+  }
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+    .navbar2 a {
+      float: none;
+      display: block;
+    }
+   
+  }
+   /*    //////////////////////////////////////////////////////////////////////////////////// */
+      /* sidebar */
+      body {
+        font-family: "Lato", sans-serif;
+      }
+      .hiddenmenu
+      {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      .msidebar{
+        display: none;
+      }
+      .msidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      .sidebar a  {
+        padding: 10px ;
+        text-decoration: none;
+        font-size: 13px;
+        color:black;
+        display: block;
+        transition: 0.3s;
+        text-align: left;
+        margin-left: 21px;
+      }
+      
+      .sidebar a:hover {
+        background-color: #555;
+      }
+      .msidebar a:hover{
+        color: #f1f1f1;
+      }
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 1px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      .msidebar .closebtn{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+      }
+      
+      .openbtn:hover {
+        background-color: #444;
+      }
+      
+      .sidebar h1
+      {
+          font-size: 18px;
+          padding: 2px 2px 2px 2px;
+          text-align: left;
+          margin-left: 27px;
+      }
+      .msidebar h1{
+        font-size: 13px;
+        padding: 2px 2px 2px 2px;
+        text-align: left;
+        margin-left: 30px;
+      }
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+  
+      

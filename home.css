@@ -1,0 +1,81 @@
+body
+{
+    background-color: lightgray;
+}
+.container
+{
+    height: 250px;
+    background-color: white;
+    padding: 10px 5px 0px;
+    position: relative;
+}
+.caption
+{
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 15px;    
+}
+.img-container
+{
+    height: 220px;
+    display: flex;
+    background-color: white;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.supply-img
+{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+.btn-con1
+{
+    position: absolute;
+    top: 95px;
+    left: 15px;
+}
+.btn-con2
+{
+    position: absolute;
+    top: 95px;
+    right: 15px;
+}
+#nxt-ptn,#pre-ptn
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+.container:hover #nxt-ptn,.container:hover #pre-ptn
+{
+    opacity: 0.4;
+}
+.ptn-img
+{
+    width: 20px;
+    height: 20px;
+}
+.img-container::-webkit-scrollbar
+{
+    background-color: transparent;
+    height: 5px;
+}
+.img-container::-webkit-scrollbar-thumb {
+    background: rgb(158, 156, 156);
+    border-radius: 10px;
+}
+/* .img-container::-webkit-scrollbar-thumb:hover {
+     opacity: 0.7;  
+    
+}  */
+.img-container:hover {
+    overflow-x: scroll;
+}

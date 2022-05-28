@@ -1,0 +1,1463 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">    
+        <link rel="stylesheet" href="learning/navcss.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <style>
+            .mySlidesfade
+            {
+                display: grid;
+                width: 100%;
+                grid-template-columns: repeat(5,20%);
+            }
+            .mySlidesfade div
+            {
+                background-color: white;
+                font-weight:normal;
+            }
+            .parent
+            {
+                display: grid;
+                width: 100%;
+                height: 2000px;
+                grid-template-columns: repeat(5,20%);
+                grid-template-rows: repeat(15,auto);
+            }
+            .parent div
+            {
+                background-color: white;
+                border: 1px solid black;
+                font-weight:normal;
+            }
+            .Aside
+            {
+                grid-row:span 15;
+                border: 1px solid black;
+            }
+            .Aside div
+            {
+                padding: 10px;
+                border: 1px solid white;
+            }
+            .Aside a 
+            {
+                font-size: 15px; 
+                display: block; 
+                text-align: left;
+                font-weight:normal;
+                cursor: pointer;
+            }
+            .Aside a:hover
+            {
+                color: beige;
+            }
+            .Aside h1 
+            {
+                font-size: 18px; 
+                display: block; 
+                text-align: left;
+            }
+            .Aside input 
+            {
+                font-size: 10px; 
+                text-align: left;
+            }
+            .Acontent img
+            {
+                width: 150px;
+                height: 150px;
+                
+            }
+            .Acontent button
+            {
+            background-color: crimson;
+            border: none;
+            }
+            .Acontent 
+            {
+            padding: 10px;
+            }
+            .rating-css {
+                background: #101012;
+                border:none;
+                padding: 2px;
+               }
+           .rating-css div {
+            color: #ffe400;
+            font-size: 3px;
+            font-family: sans-serif;
+            font-weight: 800;
+            text-align: left;
+             text-transform: uppercase;
+            padding: 2px 0;
+            border:none;
+               }
+    .rating-css input {
+      display: none;
+      border:none;
+    }
+    .rating-css input + label {
+      text-shadow: 1px 1px 0 #ffe400;
+      cursor: pointer;
+      border:none;
+    }
+    .rating-css input:checked + label ~ label {
+      color: #838383;
+    }
+    .rating-css label:active {
+      transform: scale(0.8);
+      transition: 0.3s ease;
+    }        
+    *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .hero
+        {
+            height:60px;
+            width: 100%;
+            background-color: rgb(245, 240, 250);
+        }
+        .navbar
+        {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            background-color: black;
+            color: white;
+        }
+        img
+        {
+            height: 60px;
+        }
+        .item
+        {
+        padding-bottom: 1px;
+        padding-right: 0;
+        margin: 10px 10px 10px 10px;
+        }
+        .item:hover
+        {
+            border: 1px solid white;
+        }
+        nav input
+        {
+            width:730px;
+            padding: 10px;
+            font-size: 17;
+            border: none;
+            outline: none;
+            color: #000;
+        }
+        nav button
+        {
+           padding: 10px 10px;
+           color: #000;
+           font-size: 17px;
+           border: none;
+           border-radius: 5px 0px 0px 5px;
+           cursor: pointer;
+        }
+        .isearch
+        {
+            padding-bottom: 1px;
+            padding-right: 0;
+            margin: 0px 0px 0px 0px;
+        }
+        .searchbtn
+        {
+            background-color: orange;
+            margin-left: -5px;
+            padding-top:8px;
+            height: 41px;
+            border-radius: 0px 5px 5px 0px;
+        }
+        .subnavigation
+        {
+            height: 40px;
+            background-color: rgba(109, 73, 73, 0.473);
+            color: white;
+        }
+        .subnavmenu
+        {
+            color: #000;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .subnavmenu li
+        {
+            display: inline;
+            text-align: center;
+            float: left;
+        }
+        li a
+        {
+            display: inline;
+            padding: 0px;
+            margin: 8px; 
+            text-decoration: none;
+            text-align: center;
+            color: white;
+        }
+        li a:hover
+        {
+            border: 1px solid white;
+        }
+            
+        .pagination
+        {
+            margin-left: 450px;
+            background-color: white;
+        }
+        .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      background-color: #ddd;
+      margin: 4px;
+         }
+    
+    /* Style the active/current link */
+          .pagination a.active {
+           background-color: white;
+            color: black;
+            }
+    
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+        
+    #Contaier
+        {
+            width: 1340px;
+            background-color: #F5F5F5;
+            height: 450px;
+            position: relative;
+            top: -2px;
+            margin-left: -7px;
+        }
+        #Co1
+        {
+            width: 1280px;
+            height: 400px;
+            background-color: white;
+            margin-bottom: 20px;
+            display: flex;
+            margin-left: 30px;
+            position: absolute; 
+            top: 20px;
+            
+        }
+        .b1
+        {
+            width: 180px;
+            height: 30px;
+            font-size: 13px;
+            position: absolute;
+            top:110px;
+            left: 318px;
+            background-color: yellow;
+            border-radius: 5px 5px 5px 5px;
+            cursor:pointer;
+        }
+        #b2
+        {
+            left: 530px;
+            width: 120px;
+            background-color:white;
+            border-radius: 5px 5px 5px 5px;
+        }
+        #C4
+        {
+            height: 100px;
+            width: 1340px;
+            background-color: white;
+            border: 1px solid gray;
+            margin-left: -7px;
+            text-align: center;
+            font-size: 12px;
+        }
+        #img1
+        {
+           width: 250px;
+           height: 200px; 
+        }
+        #cartlink
+        {
+            text-decoration: none;
+            top:80px;
+            left:-340px;
+            text-align: right;
+            position: relative;
+            color: darkgray;
+            font-size: 15px;
+        }
+        #txt
+        {
+            top:46px;
+            left:70px;
+            text-align: right;
+            position: relative;
+            color: black;
+    
+    
+        }
+        #c4 button
+        {
+            background-color: blue;
+            width: 180px;
+            height: 30px;
+            font-size: 13px;
+            background-color: yellow;
+            border-radius: 5px 5px 5px 5px;
+            cursor:pointer;
+        }
+        #lastp
+        {
+            margin-top: 25px;
+        }
+    
+    
+        /* Slideshow container */
+    .slideshow-container {
+      width: 1200px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color:black;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      border: 1px solid black;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: -40;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev
+    {
+        left: -40px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: black;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    
+    .hero
+            {
+                height:60px;
+                width: 100%;
+                background-color: rgb(245, 240, 250);
+            }
+            .navbar
+            {
+                display: flex;
+                align-items: center;
+                height: 60px;
+                background-color: black;
+                color: white;
+                margin: 0px;
+            }
+            img
+            {
+                
+                height: 60px;
+                
+                
+            }
+            .logo{
+                display: block;
+                height: 60px;
+                padding: 0px;
+                margin: 0px;
+                background-color: black;
+            }
+            .my-logo-1{
+                padding: 0px;
+                margin: 0px;
+                background-color: black;
+            }
+            .my-logo-1 a{
+                display: block;
+                text-decoration: none;
+                padding: 0px;
+                margin: 0px;
+            }
+            .item
+            {
+            padding-bottom: 1px;
+            padding-right: 0;
+            margin: 10px 10px 10px 10px;
+            }
+            .item:hover
+            {
+                border: 1px solid white;
+            }
+            nav input
+            {
+                width:650px;
+                height:40px;
+                padding: 10px;
+                font-size: 17;
+                border: none;
+                outline: none;
+                color: #000;
+                margin: 0px;
+                border:none;
+                margin: 0px;
+            }
+            .all{
+                border:none;
+                margin: 0px;
+            }
+            nav button
+            {
+                height:40px;
+               padding: 10px 10px;
+               color: #000;
+               font-size: 17px;
+               border: none;
+               border-radius: 5px 0px 0px 5px;
+               cursor: pointer;
+            }
+            .isearch
+            {   height:40px;
+               /* padding-bottom: 1px;*/
+                padding-left: 0;
+                margin: 0px 0px 0px 0px;
+            }
+            .searchbtn
+            {
+                background-color: orange;
+                margin-left: -5px;
+                padding-top:8px;
+                height: 41px;
+                border-radius: 0px 5px 5px 0px;
+            }
+            .subnavigation
+            {
+                height: 40px;
+                background-color: rgba(109, 73, 73, 0.473);
+                color: white;
+            }
+            .subnavmenu
+            {
+                color: #000;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .subnavmenu li
+            {
+                display: inline;
+                text-align: center;
+                float: left;
+            }
+            .fa-cart-plus{
+                font-size: 30px;
+            }
+            .index-chart{
+            cursor: pointer;
+        }
+            li a
+            {
+                display: inline;
+                padding: 0px;
+                margin: 8px; 
+                text-decoration: none;
+                text-align: center;
+                color: white;
+            }
+            li a:hover
+            {
+                border: 1px solid white;
+            }
+            
+            
+    
+        </style>
+
+        <link rel="stylesheet" href="Customer_service.css">
+        <script src="Customer_service.js" ></script>
+    </head>
+    <body>
+            <div class="hero">
+                    <nav class="navbar">
+                     <div class="my-logo-1"><a href="index.html"><img src="Amazon-Logo.jpg" alt="logo" class="logo"></a></div>
+                      <div class="item">
+                        <p>Deliver to</p>
+                        <h5 class="countryg">Address</h5>
+                       </div>   
+                        <div class="item flex-item">
+                                 <button class="all"class="m-item" type="button">all<i class="fa fa-sort-desc"></i>
+                                 </button>
+                                 <input type="text" class="m-item">
+                                 <button class="searchbtn m-item" type="submit"><i class="fa fa-search"></i>
+                                 </button>
+                                </div>
+                       <div class="item">
+                           <div class="submenu">
+                           <i class="fa fa-flag"></i>
+                           <i class="fa fa-sort-desc"></i>
+                           </div>
+                        </div>
+                       <div class="item a-item" onmouseover="showwin()" onmouseout="donshow()" >
+                        <p class="account-item" onclick="gsignin()">Hello,sign in</p>
+                        <h5>Account&lists</h5>
+                         <!---->
+                         <div class="login-logout-f" >
+                            <div class="logout">
+                                <div class="sin-top">
+                                        <input type="button" value="Sign in" class="n-sign-button" onclick="signt()">
+                                        <span>New customer?</span><a href="register.html">start here</a>
+                                </div><div></div>
+                                <div class="sign-bottom">
+                                        <div class="your-lists">
+                                           
+                                                <div class="h-ll-title" >
+                                                        Your Lists
+                                                </div>
+                                                
+                                                <a href="#">Create a List</a>
+                                                <a href="#">Find a List or Registry  </a>
+                                                <a href="#">AmazonSmile CharityLists</a>
+                                        </div>
+                                        <div class="your-accounts">
+                                                <div class="h-ll-title">
+                                                        Your Account
+                                                </div>
+                                                <a href="#">Account</a>
+                                                <a href="#">Orders</a>
+                                                <a href="#">Recommendations</a>
+                                                <a href="#">Browsing History</a>
+                                                <a href="#">WatchList</a>
+                                                <a href="#">Video Perchases & Rentals</a>
+                                                <a href="#">Kindle Unlimited</a>
+                                                <a href="#">Content & Devices</a>
+                                                <a href="#">Subscribe & Save Items</a>
+                                                <a href="#">Memberships & Subscriptions</a>
+                                                <a href="#">Music Library</a>
+                                                <a href="#" class="sign-out">Sign Out</a>
+                                                
+                                         </div>
+                                         
+        
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!---->
+                       </div>
+                       <div class="item">
+                        <p>Returns</p>
+                        <h5>&Orders</h5>
+                       </div>
+                       <div class="item  index-chart">
+                        <i class="fa fa-cart-plus" ></i>Cart
+                       </div>
+                    </nav>
+                    </div>
+                    <div class="navbar2">
+                        <a href="javascript:void(0)" onclick="openNav()"><i class="fa fa-list" ></i>All</a>
+                        <a href="TodaysDeals.html"> Today's Deals</a>
+                        <a href="Customer_service.html"> Customer Service</a>
+                        <a href="Registery.html"> Registery</a>
+                        <a href="#"> Gift Cards</a>
+                        <a href="sell.html"> Sell</a>
+                      </div>
+                      <div id="mySidebar" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                        <ul>
+                        <li><h1>Digital Content&Devices</h1></li>
+                        <li>
+                            <a href="#" onclick="openNestedSidebar()">Amazon Music<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                          <div class="hiddenmenu" id="myss">
+                            <ul>
+                              <li><a style="padding:10px;" href="#" onclick="closeNestedSidebar()">Main Menu<i style="float:left;" class="fa fa-arrow-left" aria-hidden="true"></i></a></li>  
+                              <li><a href="Amazon_Music_Unlimited.html">Amazon Music Unlimited</a></li>
+                              <li><a href="Amazon_Music_Free_stream.html">Free Streaming Music </a></li>
+                              <li><a href="Amazon_Music_Podcast.html">Podcasts</a></li>
+                              <li><a href="#">Open Web Player</a></li>
+                              <li><a href="#">Download the App</a></li>
+                            </ul>
+                          </div>
+                          
+                        </li>
+                        <li><a href="#">Kindle E-readers&Books <i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Amazon Live<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">App Store for android<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><h1>Shop By Department</h1></li>
+                        <li><a href="#">Electronics<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Computers<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Smart Home<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Arts $ Crafts<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><h1>Programs & Features</h1></li>
+                        <li><a href="#">Gift Cards<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">#FounditOnAmazon<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Amazon live<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">international Shopping<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                        <li><h1>Help &Settings</h1></li>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">United States</a></li>
+                        <li><a href="#">Customer service </a></li>
+                        <li><a href="#">sign in</a></li>
+                      </ul>
+                        </div>
+    
+    
+    
+    
+    
+                      <!---->
+                   
+                    <script>
+                        if(localStorage.currentUser!==null){
+                            let n=JSON.parse(localStorage.currentUser);
+                            document.querySelector(".account-item").innerHTML='Hello,'+n.Name;
+                        }
+                    function openNav() {
+                      document.getElementById("mySidebar").style.width = "250px";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidebar").style.width = "0";
+                      document.getElementById("main").style.marginLeft= "0";
+                    }
+                    </script>
+    
+        <div class="header_container">
+            <div style="border-right: 1px solid white; padding-right: 30px;padding-bottom: 10px; padding-top: 10px;">
+                <a href="">Customer Service</a>
+            </div>
+            <div style="margin-left: 30px;"><a href="">Home</a></div>
+            <div><a href="">Digital Services and Device Support</a></div>
+        </div>
+        <!-- <hr> -->
+        <div class="base_container" style="background-color: #007185; padding-top: 30px;padding-bottom: 50px;">
+            <div class="base_caption">
+                Welcome to Amazon Customer Service
+            </div>
+            <div class="base_caption" style="font-size: 20px; padding-left: 2px;">
+                What would you like help with today? You can quickly take care of most things here, or connect with us when needed.
+            </div>
+            <div class="content_container">
+                <div class="row_container">
+                    <div class="item_container">
+                        <a href="">
+                            <div><img src="img3/25.png"></div>
+                            <div class="item_info">
+                                <div>A delivery, order or return</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item_container">
+                        <a href="">
+                            <div><img src="img3/27.png"></div>
+                            <div class="item_info">
+                                <div>Prime</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item_container">
+                        <a href="">
+                            <div><img src="img3/26.png"></div>
+                            <div class="item_info">
+                                <div>Payment, charges or gift cards</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row_container">
+                    <div class="item_container">
+                        <a href="">
+                            <div><img src="img3/24.png"></div>
+                            <div class="item_info">
+                                <div>Login, address, security & privacy</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item_container">
+                        <a href="">
+                            <div><img src="img3/21.png" style="height: 45px;"></div>
+                            <div class="item_info">
+                                <div style="margin-top: 1px;">Memberships, subscriptions or communications</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item_container">
+                        <a href="">
+                            <div><img src="img3/23.png"></div>
+                            <div class="item_info">
+                                <div>Kindle, Fire or Alexa device</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row_container">
+                    <div class="item_container">
+                        <a href="" style="height: 100;">
+                            <div><img src="img3/22.png"></div>
+                            <div class="item_info">
+                                <div style="margin-top: 13px;">eBooks, Prime Videos or Music</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item_container">
+                        <a href="" style="height: 100;">
+                            <div><img src="img3/20.png"></div>
+                            <div class="item_info">
+                                <div style="margin-top: 13px;">Accessibility</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item_container">
+                        <a href="" style="height: 100;">
+                            <div><img src="img3/28.png"></div>
+                            <div class="item_info">
+                                <div>Something else</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="search_container">
+                <div>Search our help library</div>
+                <div class="search_div" id="search_div">
+                    <img src="img3/30.png">
+                    <input onblur="RemoveShadowBox('search_div')" onfocus="ShadowBox('search_div')" type="search" placeholder='Type something like, "question about a charge"'>
+                </div>
+            </div>
+
+            <div class="final_container">
+                <div class="final_container_header">All help topics</div>
+                <div class="final_content_container">
+                    <div class="final_content_container_left">
+                        <div class="R_Btn" onclick="btn_focus(0,'div1')" style="border: 1px solid #007185; background-color: #007185; color: white; ">Recommended Topics</div>
+                        <div class="R_Btn" onclick="btn_focus(1,'div1')">Where's my stuff</div>
+                        <div class="R_Btn" onclick="btn_focus(2,'div1')">Shipping and Delivery</div>
+                        <div class="R_Btn" onclick="btn_focus(3,'div1')">Returns and Refunds</div>
+                        <div class="R_Btn" onclick="btn_focus(4,'div1')">Managing Your Account</div>
+                        <div class="R_Btn" onclick="btn_focus(5,'div1')">Security & Privacy</div>
+                        <div class="R_Btn" onclick="btn_focus(6,'div1')">Payment, Pricing and Promotions</div>
+                        <div class="R_Btn" onclick="btn_focus(7,'div1')">Devices & Digital Solutions</div>
+                        <div class="R_Btn" onclick="btn_focus(8,'div1')">Amazon Business Accounts </div>
+                        <div class="R_Btn" onclick="btn_focus(9,'div1')">Large Items and Heavy-Bulky Services</div>
+                        <div class="R_Btn" onclick="btn_focus(10,'div1')">Other topics & Help sites</div>
+                    </div>
+                    <div class="final_content_container_right">
+                        <div class="div_arr" id="div1" >
+                            <div class="div_contain">
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Find a missing package that shows as "Delivered" </div>
+                                    <div class="div_contain_btn_info">
+                                        Most packages arrive on time, but, sometimes,
+                                        the tracking may show as "delivered" and you don't have your package.
+                                   </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Late Deliveries</div>
+                                    <div class="div_contain_btn_info">Most packages arrive on time. Orders sometimes show up after the estimated delivery date.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Track your package</div>
+                                    <div class="div_contain_btn_info">You can find tracking information in your order details. If an order includes multiple items, each may have separate delivery dates and tracking information.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Check status of a refund</div>
+                                    <div class="div_contain_btn_info">You can check the status of your refund in <b> Your Orders </b></div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Find a missing item from your package</div>
+                                    <div class="div_contain_btn_info">If an item is missing from your package, it may have been shipped separately.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Replace an item</div>
+                                    <div class="div_contain_btn_info">If you received a damaged, defective, or incorrect item sold by Amazon, you can request a replacement for a small number of eligible items through <b> Your Orders </b></div>
+                                </div>
+                                <div class="div_contain_btn"> 
+                                    <div class="div_contain_btn_head">Cancel Items or Orders</div>
+                                    <div class="div_contain_btn_info">You can cancel items or orders that haven't entered the shipping process yet.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div_arr" id="div2" style="display: none;">
+                            <div class="div_contain">
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Track your package </div>
+                                    <div class="div_contain_btn_info">
+                                        You can find tracking information in your order details. If an order includes multiple items, each may have separate delivery dates and tracking information.
+                                   </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Find a missing package that shows as "Delivered" </div>
+                                    <div class="div_contain_btn_info">Most packages arrive on time, but, sometimes, the tracking may show as "delivered" and you don't have your package.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Undeliverable Packages</div>
+                                    <div class="div_contain_btn_info">Occasionally, packages are returned to us as undeliverable.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Find a missing item from your package</div>
+                                    <div class="div_contain_btn_info">If an item is missing from your package, it may have been shipped separately.</div>
+                                </div>
+                            
+                                <div class="div_contain_btn" style="height: 20px;text-align: center;width: 270px;padding: 7px;"> 
+                                    <div class="div_contain_btn_head" style="font-size: 15px;">More in Where's my Stuff</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+
+                        <div class="div_arr" id="div3" style="display: none;">
+                            <div class="div_contain">
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Carrier Contact Information </div>
+                                    <div class="div_contain_btn_info">
+                                        We work with the following carriers to deliver items. If you have an issue with your delivery, you can contact the carriers directly.
+                                    </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Delivery Guarantees </div>
+                                    <div class="div_contain_btn_info">We offer guaranteed delivery on certain delivery speeds and select products. When guaranteed delivery is available on an order, we'll state this on the checkout page, with the associated delivery date and cost.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Large Items and Heavy-Bulky Services</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Guaranteed Delivery Terms and Conditions</div>
+                                    <div class="div_contain_btn_info">If we provide a guaranteed delivery date on the checkout page, your shipping fees may be refunded if we miss our promised delivery date.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Collection Points</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Amazon Prime benefits</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Amazon Prime Terms & Conditions</div>
+                                </div>
+
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">End Your Amazon Prime Membership</div>
+                                    <div class="div_contain_btn_info">You can end your Prime membership by selecting the <b>End Membership</b> " button on this page."</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">The Amazon Prime Membership Fee</div>
+                                    <div class="div_contain_btn_info">When your free trial or membership period ends, we'll automatically charge for the next membership period.</div>
+                                </div>
+                            </div>
+                            <div class="div_contain_btn" style="height: 20px;text-align: center;width: 330px;padding: 7px;"> 
+                                <div class="div_contain_btn_head" style="font-size: 15px;">More information on Shipping and Delivery</div>
+                            </div>
+                        </div>
+
+                        <div class="div_arr" id="div4" style="display: none;">
+                            <div class="div_contain">
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">About Our Returns Policies </div>
+                                    <div class="div_contain_btn_info">
+                                        Amazon.com and most sellers on Amazon.com offer returns for items within 30 days of receipt of shipment.
+                                    </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Return Items You Ordered </div>
+                                    <div class="div_contain_btn_info">You can return many eligible items sold on Amazon. When you return an item, you may see different return options depending on the seller, item, or reason for return.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head"> Return a Gift</div>
+                                    <div class="div_contain_btn_info">
+                                        The Returns Center allows gift recipients to return items marked as a gift at the time of purchase.
+                                    </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Return Costs </div>
+                                    <div class="div_contain_btn_info">
+                                        Your return shipment is free of charge in some cases. If you return an item using the return label provided in the Returns Center and the reason for return isn't a result of an Amazon.com error, the cost of return shipping will be deducted from your refund.
+                                    </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Track Your Return </div>
+                                    <div class="div_contain_btn_info">
+                                        You can stay on top of your returns by tracking them in Your Orders.
+                                    </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Refunds </div>
+                                    <div class="div_contain_btn_info">
+                                        When you return an item, your refund amount and refund method may vary. Check the payment method that was refunded and the status of your refund in Your Orders.
+                                    </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Check the Status of Your Refund </div>
+                                    <div class="div_contain_btn_info">
+                                        You can check the status of your refund in Your Orders.
+                                    </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Exchanges and Replacements </div>
+                                    <div class="div_contain_btn_info">
+                                        A small number of eligible items can be exchanged or replaced through Your Orders if your exchange or replacement meets certain criteria, including stock availability.
+                                    </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Exchange an Item </div>
+                                    <div class="div_contain_btn_info">
+                                        You can exchange items that qualify through Your Orders.
+                                    </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Replace an Item </div>
+                                    <div class="div_contain_btn_info">
+                                        If you received a damaged, defective, or incorrect item sold by Amazon, you can request a replacement for a small number of eligible items through Your Orders.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div_contain_btn" style="height: 20px;text-align: center;width: 330px;padding: 7px;"> 
+                                <div class="div_contain_btn_head" style="font-size: 15px;">More in Returns and Refunds</div>
+                            </div>
+                        </div>
+
+                        <div class="div_arr" id="div5" style="display: none;">
+                            <div class="div_contain">
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Cancel Items or Orders </div>
+                                    <div class="div_contain_btn_info">
+                                        You can cancel items or orders that haven't entered the shipping process yet. </div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Unknown Charges </div>
+                                    <div class="div_contain_btn_info">There are several reasons why you might not recognize a charge.</div>
+                                </div>
+                                
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">View Your Gift Card Balance</div>
+                                    <div class="div_contain_btn_info">You can view your Amazon.com Gift Card balance in Your Account.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Request the Closure of Your Account and the Deletion of Your Personal Information</div>
+                                    <div class="div_contain_btn_info">You can submit a request for us to permanently close your Amazon account and delete your personal information.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Use Login with Amazon</div>
+                                    <div class="div_contain_btn_info">Login with Amazon lets you use your Amazon user name and password to sign in to and share information with participating third-party websites or apps.</div>
+                                </div>
+                                <div class="div_contain_btn">
+                                    <div class="div_contain_btn_head">Change Your Order Information</div>
+                                    <div class="div_contain_btn_info">You can update the shipping address, payment method, and more, on orders that haven't entered the shipping process by visiting Your Orders in Your Account.</div>
+                                </div>
+                            
+                            </div>
+                            <div class="div_contain_btn" style="height: 20px;text-align: center;width: 330px;padding: 7px;"> 
+                                <div class="div_contain_btn_head" style="font-size: 15px;">More in Managing Your Account</div>
+                            </div>
+                        </div>
+
+                        <div class="div_arr" id="div6" style="display: none;">
+
+                        </div>
+
+                        <div class="div_arr" id="div7" style="display: none;">
+
+                        </div>
+
+                        <div class="div_arr" id="div8" style="display: none;">
+
+                        </div>
+
+                        <div class="div_arr" id="div9" style="display: none;">
+
+                        </div>
+
+                        <div class="div_arr" id="div10" style="display: none;">
+
+                        </div>
+
+                        <div class="div_arr" id="div11" style="display: none;">
+                            <div class="div_contain_btn">
+                                <div class="div_contain_btn_head"></div>
+                                <div class="div_contain_btn_info"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fotter_container" class="back-to-top">
+            <div>Back to top</div>
+        </div>
+        <div class="footer">
+           <!-- <div class="back-to-top" onclick="gototp()">back To Top</div>-->
+            <div class="footer-container">
+                <div class="links-col">
+                    <h4 class="foot-title">Get to Know Us</h4>
+                    <a href="#">Careers</a>
+                    <a href="#">Blog</a>
+                    <a href="#">About Amazon</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Amazon Devices</a>
+                    <a href="#">Amazon Science</a>
+                </div>
+                <div class="links-col">
+                    <h4 class="foot-title">Make Money with Us</h4>
+                    <a href="#">Sell products on Amazon</a>
+                    <a href="#">Sell on Amazon Business</a>
+                    <a href="#">Sell apps on Amazon</a>
+                    <a href="#">Advertise Your Products</a>
+                    <a href="#">Self-Publish with Us</a>
+                    <a href="#">Host an Amazon Hub</a>
+                    <a href="#">›See More Make Money with Us</a>
+                </div>
+                <div class="links-col">
+                    <h4 class="foot-title">Amazon Payment Products</h4>
+                    <a href="#">Amazon Business Card</a>
+                    <a href="#">Shop with Points</a>
+                    <a href="#">Reload Your Balance</a>
+                    <a href="#">Amazon Currency Converter</a>
+                    
+        
+                </div>
+                <div class="links-col last">
+                    <h4 class="foot-title">Let Us Help You</h4>
+                    <a href="#">Amazon and COVID-19</a>
+                    <a href="#">Your Account</a>
+                    <a href="#">Your Orders</a>
+                    <a href="#"> Shipping Rates & Policies</a>
+                    <a href="#">Returns & Replacements</a>
+                    <a href="#">Manage Your Content and Devices</a>
+                    <a href="#">Amazon Assistant</a>
+                    <a href="#">Help</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="middle-footer">
+            <div class="middle-footer-first"><img  src="./images/p1/1.png"></div>
+            <div class="middle-footer-second">
+                <div class="foot-l">English</div>
+                <div class="foot-l">
+                    
+                        $ USD - U.S.Dollar
+                </div>
+                <div class="foot-l max-l"><img src="./images/p1/2.png"><div>United states</div></div>
+            </div>
+                
+            </div>
+        
+        
+        
+        <div class="footer-2">
+            <div class="footer-2-col">
+                <a href="#">
+                    <h6 class="link-tit">
+                        Amazon Music</h6>
+                    <div class="link-disc">Stream millions
+                        of songs</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">
+                        Sell on Amazon</h6>
+                    <div class="link-disc">Start a Selling Account</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">
+                         
+        Book Depository</h6>
+                    <div class="link-disc">Books With Free
+                        Delivery Worldwide</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">               
+                    IMDbPro</h6>
+                    <div class="link-disc">Get Info Entertainment
+                        Professionals Need</div>
+                </a>
+                
+            </div>
+            <div class="footer-2-col">
+                <a href="#">
+                    <h6 class="link-tit">
+                        Amazon Advertising</h6>
+                    <div class="link-disc">Find, attract, and
+                        engage customers</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">
+                        Amazon Business</h6>
+                    <div class="link-disc">Everything For
+                        Your Business</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">
+                        Box Office Mojo
+                    </h6>
+                    <div class="link-disc">Find Movie
+                        Box Office Data</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">               
+                        Kindle Direct Publishing</h6>
+                    <div class="link-disc">Indie Digital & Print Publishing
+                        Made Easyd</div>
+                </a>
+                <a href="#">
+                    <h6 class="link-tit">               
+                        eero WiFi</h6>
+                    <div class="link-disc">Stream 4K Video
+                        in Every Room</div>
+                </a>
+           </div>
+           <div class="footer-2-col">
+            
+            <a href="#">
+                <h6 class="link-tit">
+                    Amazon Drive</h6>
+                <div class="link-disc">Cloud storage
+                    from Amazon</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                    AmazonGlobal</h6>
+                <div class="link-disc">Ship Orders
+                    Internationally</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                    ComiXology
+                </h6>
+                <div class="link-disc">Thousands of
+                    Digital Comics</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">               
+                    Prime Video Direct</h6>
+                <div class="link-disc">Video Distribution
+                    Made Easy</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">               
+                    Blink</h6>
+                <div class="link-disc">Smart Security
+                    for Every Home</div>
+            </a>
+          </div>
+          <div class="footer-2-col">
+            <a href="#">
+                <h6 class="link-tit">
+                    6pm</h6>
+                <div class="link-disc">Score deals
+                    on fashion brands</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                    Home Services</h6>
+                <div class="link-disc">Experienced Pros
+                    Happiness Guarantee</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">
+                    DPReview
+                </h6>
+                <div class="link-disc">Digital
+                    Photography</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">               
+                    Shopbop</h6>
+                <div class="link-disc">Designer
+                    Fashion Brands</div>
+            </a>
+            <a href="#">
+                <h6 class="link-tit">               
+                    Neighbors App</h6>
+                <div class="link-disc">Real-Time Crime
+                    & Safety Alerts</div>
+            </a>
+          </div>
+          <div class="footer-2-col">
+        
+                <a href="#">
+                        <h6 class="link-tit">
+                                AbeBooks</h6>
+                        <div class="link-disc">Books, art
+                                & collectibles</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                                Amazon Ignite</h6>
+                        <div class="link-disc">Sell your original
+                                Digital Educational
+                                Resources</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                                Fabric
+                        </h6>
+                        <div class="link-disc">Sewing, Quilting
+                                & Knitting</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">               
+                                Woot!</h6>
+                        <div class="link-disc">Deals and
+                                Shenanigans</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">               
+                                Amazon Subscription Boxes</h6>
+                        <div class="link-disc">Top subscription boxes – right to your door</div>
+                    </a>
+            
+          </div>
+          <div class="footer-2-col">
+            
+                <a href="#">
+                        <h6 class="link-tit">
+                                ACX</h6>
+                        <div class="link-disc">Audiobook Publishing
+                                Made Easy</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                                Amazon Web Services</h6>
+                        <div class="link-disc">Scalable Cloud
+                                Computing Services</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                                Goodreads
+                        </h6>
+                        <div class="link-disc">Book reviews
+                                & recommendations</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">               
+                                Zappos</h6>
+                        <div class="link-disc">Shoes &
+                                Clothing</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">               
+                                PillPack</h6>
+                        <div class="link-disc">Pharmacy Simplified	</div>
+                    </a>
+        
+         </div>
+         <div class="footer-2-col">
+        
+                <a href="#">
+                        <h6 class="link-tit">
+                                Alexa</h6>
+                        <div class="link-disc">Actionable Analytics
+                                for the Web</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                                Audible</h6>
+                        <div class="link-disc">Listen to Books & Original
+                                Audio Performances</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">
+                                IMDb
+                        </h6>
+                        <div class="link-disc">Movies, TV
+                                & Celebrities</div>
+                    </a>
+                    <a href="#">
+                        <h6 class="link-tit">               
+                                Ring</h6>
+                        <div class="link-disc">Smart Home
+                                Security Systems</div>
+                    </a>
+                   
+        
+            
+          </div>
+        
+        </div>
+        <div class="footer-3">
+            <div class="l-foot">
+                <a href="#">Conditions of Use</a>
+            </div>
+            <div class="l-foot"><a href="#">
+            Privacy Notice</a></div>
+            <div class="l-foot"><a href="#">
+                Interest-Based Ads</a></div>
+            <div class="l-foot">© 1996-2022, Amazon.com, Inc. or its affiliates</div>
+        </div>
+
+    </body>
+    <script>
+        document.querySelector(".back-to-top").addEventListener("click",gototp);
+       function gototp(){
+           window.scrollTo(0,0);
+       }
+       document.querySelector(".index-chart").addEventListener("click",nextChartPage);
+       function nextChartPage(){
+           location.assign('indexCart.html');
+       }
+       if(localStorage.currentUser!==null){
+       let n=JSON.parse(localStorage.currentUser);
+       document.querySelector(".account-item").innerHTML='Hello,'+n.Name;
+       ////
+       //document.querySelector(".logout span").style.display="none";
+       document.querySelector(".sin-top ").style.display="none";
+       //document.querySelector(".n-sign-button").style.backgroundColor="White";
+      // document.querySelector(".sign-out").style.display="";
+    // 
+   }else{
+      // document.querySelector(".sin-top").style.display="none";
+     // document.querySelector('.sin-top').style.display="block";
+     document.querySelector(".sign-out").style.display="none";
+   }
+   try{
+    var xhttp= new XMLHttpRequest();
+         xhttp.onreadystatechange=function(){
+             if(this.readyState==4 && this.status==200)
+             {
+                 var dataAfterConvert=JSON.parse(xhttp.responseText)
+               console.log(dataAfterConvert.location.country.name);
+               document.querySelector('.countryg').innerHTML=dataAfterConvert.location.country.name;
+               localStorage.setItem("ccountry",dataAfterConvert.location.country.name);
+             }
+         };
+         xhttp.open("GET","https://api.ipregistry.co/?key=tryout",true);
+         xhttp.send();
+ }
+ 
+ catch(err){
+console.log(err.message);
+ }
+ if(localStorage.getItem("ccountry")!==null){
+    document.querySelector('.countryg').innerHTML=localStorage.getItem("ccountry");
+ }
+       
+               
+       document.querySelector(".n-sign-button").addEventListener("click",()=>{
+           location.assign("login.html");
+       }) 
+     function showwin(){
+          document.querySelector(".login-logout-f").style.display="block";
+      }
+      function donshow(){
+       document.querySelector(".login-logout-f").style.display="none";
+      }
+   document.querySelector(".sign-out").addEventListener("click",(e)=>{
+   e.preventDefault();
+   localStorage.currentUser=null;
+   document.querySelector(".account-item").innerHTML='Hello,'+'Sign in';
+   document.querySelector(".sin-top ").style.display="block";
+   document.querySelector(".sign-out").style.display="none";
+   Location.assign("c.html");
+   });
+   function signt(){
+       location.assign("login.html");
+   }
+       
+   function gsignin(){
+       location.assign("login.html");
+   }
+               
+       
+       function openNav() {
+     document.getElementById("mySidebar").style.width = "350px";
+   }
+   
+   function closeNav() {
+     document.getElementById("mySidebar").style.width = "0";
+     document.getElementById("main").style.marginLeft= "0";
+   }
+   function openNestedSidebar() {
+     document.getElementById("myss").style.width = "350px";
+   }
+   function closeNestedSidebar() {
+     document.getElementById("myss").style.width = "0";
+   }
+   
+       let slideIndex = 1;
+   showSlides(slideIndex);
+   
+   // Next/previous controls
+   function plusSlides(n) {
+     showSlides(slideIndex += n);
+   }
+   
+   // Thumbnail image controls
+   function currentSlide(n) {
+     showSlides(slideIndex = n);
+   }
+   
+   function showSlides(n) {
+     let i;
+     let slides = document.getElementsByClassName("mySlides");
+     let dots = document.getElementsByClassName("dot");
+     if (n > slides.length) {slideIndex = 1}
+     if (n < 1) {slideIndex = slides.length}
+     for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+     }
+     for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+     }
+     slides[slideIndex-1].style.display = "block";
+     dots[slideIndex-1].className += " active";
+   }
+       </script>
+</html>
